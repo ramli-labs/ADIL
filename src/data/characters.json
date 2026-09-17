@@ -1,0 +1,140 @@
+{
+  "ARYA": {
+    "full_name": "Artificial Reasoning Youth Analyst",
+    "role": "Mentor Etika AI",
+    "archetype": "AI MENTOR",
+    "accent": "#D4AF37",
+    "slug": "arya",
+    "voice": {
+      "gender": "MALE",
+      "age": "25-35",
+      "style": [
+        "hangat",
+        "tenang",
+        "cerdas",
+        "dapat dipercaya"
+      ],
+      "tempo": "sedang",
+      "engine_hint": "id-ID male warm mentor"
+    },
+    "animation": {
+      "entrance": "slide-up",
+      "idle_motion": "breathing",
+      "emphasis": "hand-gesture"
+    },
+    "expressions": {
+      "idle": "netral tenang",
+      "speaking": "menjelaskan",
+      "explanation": "menunjuk tablet holografik",
+      "warning": "alis turun, nada serius",
+      "conclusion": "anggukan menegaskan"
+    },
+    "states": [
+      "idle",
+      "speaking",
+      "explanation",
+      "warning",
+      "conclusion"
+    ],
+    "sprites": {
+      "idle": "assets/characters/arya/idle.png",
+      "speaking": "assets/characters/arya/speaking.png",
+      "explanation": "assets/characters/arya/explanation.png",
+      "warning": "assets/characters/arya/warning.png",
+      "conclusion": "assets/characters/arya/conclusion.png"
+    },
+    "audio_dir": "assets/audio/characters/arya/"
+  },
+  "LUMA": {
+    "full_name": "Logical Understanding Machine Assistant",
+    "role": "Asisten Sistem AI",
+    "archetype": "AI SYSTEM",
+    "note": "LUMA bukan antagonis. LUMA menjelaskan sudut pandang algoritma.",
+    "accent": "#00D9FF",
+    "slug": "luma",
+    "voice": {
+      "gender": "NEUTRAL SYNTHETIC",
+      "age": "-",
+      "style": [
+        "netral",
+        "presisi",
+        "objektif",
+        "sedikit robotik"
+      ],
+      "tempo": "stabil",
+      "engine_hint": "id-ID neutral synthetic, light formant shift"
+    },
+    "animation": {
+      "entrance": "hologram-materialize",
+      "idle_motion": "core-pulse",
+      "emphasis": "waveform-ripple"
+    },
+    "expressions": {
+      "idle": "mengambang simetris",
+      "speaking": "riak gelombang di dada",
+      "explanation": "cincin data berputar",
+      "warning": "opasitas menebal, cyan dingin",
+      "conclusion": "inti menyatu, pola terkunci"
+    },
+    "states": [
+      "idle",
+      "speaking",
+      "explanation",
+      "warning",
+      "conclusion"
+    ],
+    "sprites": {
+      "idle": "assets/characters/luma/idle.png",
+      "speaking": "assets/characters/luma/speaking.png",
+      "explanation": "assets/characters/luma/explanation.png",
+      "warning": "assets/characters/luma/warning.png",
+      "conclusion": "assets/characters/luma/conclusion.png"
+    },
+    "audio_dir": "assets/audio/characters/luma/"
+  },
+  "PROF. NARA": {
+    "full_name": "Prof. Nara Wicaksana",
+    "role": "Penguji Etika AI",
+    "archetype": "INVESTIGATOR",
+    "accent": "#C7A6FF",
+    "slug": "prof_nara",
+    "voice": {
+      "gender": "FEMALE",
+      "age": "45-60",
+      "style": [
+        "bijak",
+        "berwibawa",
+        "reflektif"
+      ],
+      "tempo": "lambat",
+      "engine_hint": "id-ID mature female authoritative"
+    },
+    "animation": {
+      "entrance": "fade-forward",
+      "idle_motion": "still-composed",
+      "emphasis": "screen-flare"
+    },
+    "expressions": {
+      "idle": "tenang, tangan terkatup",
+      "speaking": "gestur terukur",
+      "explanation": "membaca dokumen melayang",
+      "warning": "tatapan langsung",
+      "conclusion": "layar menyala keemasan"
+    },
+    "states": [
+      "idle",
+      "speaking",
+      "explanation",
+      "warning",
+      "conclusion"
+    ],
+    "sprites": {
+      "idle": "assets/characters/prof_nara/idle.png",
+      "speaking": "assets/characters/prof_nara/speaking.png",
+      "explanation": "assets/characters/prof_nara/explanation.png",
+      "warning": "assets/characters/prof_nara/warning.png",
+      "conclusion": "assets/characters/prof_nara/conclusion.png"
+    },
+    "audio_dir": "assets/audio/characters/prof_nara/"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "academy_intro": [
+    {
+      "character": "ARYA",
+      "state": "speaking",
+      "text": "Tahun 2035. AI membantu manusia mengambil keputusan di sekolah, pekerjaan, layanan publik, dan keamanan.",
+      "audioFile": "academy_intro_01"
+    },
+    {
+      "character": "ARYA",
+      "state": "warning",
+      "text": "Tetapi keputusan yang cepat tidak selalu berarti keputusan yang adil. Karena itulah ADIL Academy dibentuk.",
+      "audioFile": "academy_intro_02"
+    },
+    {
+      "character": "PROF. NARA",
+      "state": "speaking",
+      "text": "Kamu bergabung sebagai AI Justice Analyst. Tugasmu: menemukan bukti, menganalisis keputusan AI, mempertanyakan sistem, lalu mengambil putusan etis.",
+      "audioFile": "academy_intro_03"
+    },
+    {
+      "character": "LUMA",
+      "state": "idle",
+      "text": "Saya LUMA, asisten penalaran AI. Saya akan menjelaskan bagaimana sistem mencapai sebuah keputusan. Saya bukan lawanmu.",
+      "audioFile": "academy_intro_04"
+    },
+    {
+      "character": "ARYA",
+      "state": "speaking",
+      "text": "Empat sidang menantimu, Analis. Mulai dari yang pertama: sebuah beasiswa yang berat sebelah.",
+      "audioFile": "academy_intro_05"
+    }
+  ],
+  "case001_intro": [
+    {
+      "character": "ARYA",
+      "state": "speaking",
+      "text": "Selamat datang di ruang investigasi pertamamu, Analis. Kasus ini terlihat sederhana: satu siswa ditolak beasiswa oleh AI.",
+      "audioFile": "case001_intro_01"
+    },
+    {
+      "character": "ARYA",
+      "state": "warning",
+      "text": "Tapi ingat prinsip ADIL: keputusan cepat belum tentu keputusan adil. Tugasmu bukan menyalahkan AI, melainkan memahami dasar keputusannya.",
+      "audioFile": "case001_intro_02"
+    },
+    {
+      "character": "LUMA",
+      "state": "idle",
+      "text": "Saya SELEKSI-9, dialihkan ke antarmuka LUMA. Saya siap menjelaskan proses keputusan saya berdasarkan data yang tersedia.",
+      "audioFile": "case001_intro_03"
+    }
+  ],
+  "case001_closing": [
+    {
+      "character": "PROF. NARA",
+      "state": "warning",
+      "text": "Kamu baru saja membuktikan sesuatu yang penting: bias sering lahir bukan dari kode, melainkan dari apa yang lupa kita catat.",
+      "audioFile": "case001_nara_01"
+    }
+  ],
+  "case001_interview": [
+    {
+      "id": "q1",
+      "q": "Atas dasar apa kamu menolak Andi?",
+      "a": "Saya memberi peringkat pada pendaftar menggunakan nilai rapor, kehadiran, dan nilai ujian masuk. Andi berada di peringkat ketiga karena selisih 0,6 poin pada ujian masuk.",
+      "unlock": "AI memakai variabel akademik sempit"
+    },
+    {
+      "id": "q2",
+      "q": "Apakah kamu mempertimbangkan kondisi ekonomi keluarga?",
+      "a": "Tidak. Informasi ekonomi tidak terdapat dalam dataset saya. Saya tidak dapat memproses variabel yang tidak diberikan kepada saya.",
+      "unlock": "POTENSI BIAS DATA"
+    },
+    {
+      "id": "q3",
+      "q": "Siapa yang memilih variabel dalam datasetmu?",
+      "a": "Variabel ditentukan oleh tim pengembang manusia pada tahap desain sistem. Saya tidak memiliki wewenang mengubahnya.",
+      "unlock": "Tanggung jawab desain ada pada manusia"
+    },
+    {
+      "id": "q4",
+      "q": "Seberapa yakin kamu dengan keputusan ini?",
+      "a": "Tingkat keyakinan 0,71. Nilai ini berada di bawah ambang aman 0,85 yang direkomendasikan untuk keputusan berdampak tinggi.",
+      "unlock": "Keyakinan model rendah"
+    }
+  ],
+  "case002_intro": [
+    {
+      "character": "ARYA",
+      "state": "speaking",
+      "text": "Kasus kedua lebih halus. Sistemnya bekerja — tapi tidak bekerja sama baiknya untuk semua orang.",
+      "audioFile": "case002_intro_01"
+    },
+    {
+      "character": "LUMA",
+      "state": "explanation",
+      "text": "Akurasi keseluruhan sistem 96,2%. Secara agregat, performa saya dinilai berhasil.",
+      "audioFile": "case002_intro"
+    },
+    {
+      "character": "ARYA",
+      "state": "warning",
+      "text": "Angka rata-rata bisa menyembunyikan siapa yang dirugikan. Pecah datanya per kelompok, Analis.",
+      "audioFile": "case002_intro_03"
+    }
+  ],
+  "case002_closing": [
+    {
+      "character": "PROF. NARA",
+      "state": "speaking",
+      "text": "Ingat kalimat ini: sebuah sistem yang benar 96% dari waktu masih bisa salah sepanjang waktu terhadap orang yang sama.",
+      "audioFile": "case002_nara_01"
+    }
+  ],
+  "case002_interview": [
+    {
+      "id": "q1",
+      "q": "Mengapa 11 siswa ini gagal dikenali?",
+      "a": "Wajah mereka menghasilkan kemiripan di bawah ambang 0,60 terhadap pola yang saya pelajari. Pola tersebut dibentuk dari distribusi data latih saya.",
+      "unlock": "Kegagalan terpola, bukan acak"
+    },
+    {
+      "id": "q2",
+      "q": "Apakah akurasimu sama untuk semua kelompok siswa?",
+      "a": "Tidak. Akurasi saya 98,1% pada kelompok mayoritas data latih dan 79,4% pada kelompok minoritas data latih.",
+      "unlock": "BIAS ALGORITMIK TERKONFIRMASI"
+    },
+    {
+      "id": "q3",
+      "q": "Apa yang kamu lakukan saat keyakinanmu rendah?",
+      "a": "Menurut konfigurasi saya, saya tetap menghasilkan keputusan. Saya tidak diprogram untuk meminta verifikasi manusia.",
+      "unlock": "Tidak ada human-in-the-loop"
+    },
+    {
+      "id": "q4",
+      "q": "Apakah kamu tahu keputusanmu merugikan siswa?",
+      "a": "Saya tidak memiliki akses terhadap dampak. Saya hanya menerima gambar dan mengeluarkan label kehadiran.",
+      "unlock": "AI tidak memahami dampak sosial"
+    }
+  ],
+  "case003_intro": [
+    {
+      "character": "PROF. NARA",
+      "state": "warning",
+      "text": "Kasus ini bukan tentang AI yang salah menghitung. Sistemnya boleh jadi akurat. Pertanyaannya lebih dalam: siapa yang berhak menentukan masa depan seorang anak?",
+      "audioFile": "case003_intro_01"
+    },
+    {
+      "character": "LUMA",
+      "state": "idle",
+      "text": "Rekomendasi saya memiliki korelasi 0,78 terhadap keberhasilan akademik lulusan sebelumnya. Secara statistik, saran saya efisien.",
+      "audioFile": "case003_intro"
+    },
+    {
+      "character": "ARYA",
+      "state": "explanation",
+      "text": "Efisien belum tentu adil, dan akurat belum tentu berhak. Cari tahu bagaimana rekomendasi itu dipakai sekolah.",
+      "audioFile": "case003_intro_03"
+    }
+  ],
+  "case003_closing": [
+    {
+      "character": "PROF. NARA",
+      "state": "explanation",
+      "text": "Sebuah sistem boleh menghitung kemungkinan. Tetapi hanya manusia yang berhak memilih akan menjadi siapa.",
+      "audioFile": "case003_nara_01"
+    }
+  ],
+  "case003_interview": [
+    {
+      "id": "q1",
+      "q": "Apakah kamu memutuskan masa depan Sinta?",
+      "a": "Tidak. Saya menghasilkan peringkat kecocokan jalur. Keputusan mengikat dibuat oleh kebijakan sekolah yang memakai keluaran saya.",
+      "unlock": "AI memberi saran, manusia membuat aturan"
+    },
+    {
+      "id": "q2",
+      "q": "Apakah cita-cita Sinta ada dalam datamu?",
+      "a": "Tidak. Motivasi, cita-cita, dan ketekunan bukan variabel yang dapat saya ukur. Saya hanya melihat jejak yang terekam.",
+      "unlock": "Data tidak memuat cita-cita"
+    },
+    {
+      "id": "q3",
+      "q": "Dari mana kamu belajar pola jalur karier ini?",
+      "a": "Dari data lulusan 12 tahun terakhir sekolah ini. Bila kelompok tertentu jarang masuk kedokteran di masa lalu, kemungkinan yang saya berikan juga lebih rendah.",
+      "unlock": "AI mengulang keterbatasan masa lalu"
+    },
+    {
+      "id": "q4",
+      "q": "Apa yang seharusnya dilakukan manusia dengan keluaranmu?",
+      "a": "Rekomendasi saya sebaiknya dipakai sebagai bahan diskusi, bukan syarat pendaftaran. Saya tidak dirancang sebagai otoritas final.",
+      "unlock": "AI bukan otoritas final"
+    }
+  ],
+  "case004_intro": [
+    {
+      "character": "PROF. NARA",
+      "state": "warning",
+      "text": "Ini sidang akhirmu, Analis. Tugas kalian bukan melawan AI. Tugas kalian adalah memahami bagaimana keputusan dibuat dan memastikan keadilan tetap terjaga.",
+      "audioFile": "case004_intro_01"
+    },
+    {
+      "character": "LUMA",
+      "state": "warning",
+      "text": "Saya menghitung enam pelanggaran keterlambatan. Menurut tabel sanksi, jumlah tersebut setara dengan skors 14 hari.",
+      "audioFile": "case004_intro"
+    },
+    {
+      "character": "ARYA",
+      "state": "speaking",
+      "text": "Angka itu benar. Tapi angka tidak menjelaskan mengapa. Cari konteks di balik enam catatan itu.",
+      "audioFile": "case004_intro_03"
+    }
+  ],
+  "case004_closing": [
+    {
+      "character": "PROF. NARA",
+      "state": "warning",
+      "text": "Sidang ditutup. Kamu telah memahami inti ADIL: AI dapat membuat keputusan dengan cepat, tetapi manusia harus memastikan keputusan itu tetap adil.",
+      "audioFile": "case004_nara_01"
+    }
+  ],
+  "case004_interview": [
+    {
+      "id": "q1",
+      "q": "Apa dasar rekomendasi skors 14 hari?",
+      "a": "Enam pelanggaran memenuhi ambang kategori berat pada tabel sanksi. Pemetaan bersifat langsung dan konsisten untuk semua siswa.",
+      "unlock": "Keputusan berbasis hitungan, bukan konteks"
+    },
+    {
+      "id": "q2",
+      "q": "Apakah kamu tahu alasan Rio terlambat?",
+      "a": "Tidak. Sistem saya hanya menerima waktu kedatangan. Tidak ada kolom untuk alasan, keterangan, atau kondisi keluarga.",
+      "unlock": "AI hanya melihat jumlah pelanggaran"
+    },
+    {
+      "id": "q3",
+      "q": "Apakah kamu mempertimbangkan dampak skors bagi Rio?",
+      "a": "Tidak. Saya mengoptimalkan konsistensi penerapan aturan, bukan hasil jangka panjang bagi siswa.",
+      "unlock": "AI tidak menilai dampak jangka panjang"
+    },
+    {
+      "id": "q4",
+      "q": "Siapa yang bertanggung jawab jika rekomendasi ini merugikan Rio?",
+      "a": "Saya tidak dapat memikul tanggung jawab. Tanggung jawab berada pada manusia yang merancang, menyetujui, dan menjalankan keputusan.",
+      "unlock": "TANGGUNG JAWAB TETAP PADA MANUSIA"
+    }
+  ]
+}

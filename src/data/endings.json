@@ -1,0 +1,129 @@
+{
+  "profiles": [
+    {
+      "id": "evidence_investigator",
+      "label": "EVIDENCE INVESTIGATOR",
+      "axis": "evidence",
+      "desc": "Kamu tidak memutus sebelum berkasnya lengkap. Ketelitianmu mengumpulkan bukti adalah fondasi setiap putusan yang adil.",
+      "advice": "Langkah berikutnya: latih merangkai bukti menjadi satu argumen utuh, bukan sekadar mengumpulkannya."
+    },
+    {
+      "id": "critical_analyst",
+      "label": "CRITICAL AI ANALYST",
+      "axis": "inquiry",
+      "desc": "Kamu bertanya sampai sistem kehabisan jawaban. Kemampuan menginterogasi asumsi AI adalah senjata utama seorang analis.",
+      "advice": "Langkah berikutnya: ubah temuan dari pertanyaanmu menjadi rekomendasi perbaikan yang konkret."
+    },
+    {
+      "id": "fairness_guardian",
+      "label": "FAIRNESS GUARDIAN",
+      "axis": "reasoning",
+      "desc": "Kamu konsisten menemukan bukti kunci yang menentukan adil atau tidaknya sebuah keputusan. Penalaranmu tajam dan terarah.",
+      "advice": "Langkah berikutnya: perkuat sisi kebijakan — usulkan aturan, bukan hanya menunjukkan kesalahan."
+    },
+    {
+      "id": "responsible_advocate",
+      "label": "RESPONSIBLE AI ADVOCATE",
+      "axis": "ethics",
+      "desc": "Putusanmu memperbaiki sistem, bukan sekadar menyalahkan atau menghapusnya. Kamu menjaga manfaat AI sekaligus hak manusia.",
+      "advice": "Langkah berikutnya: pertahankan keseimbangan ini sambil memperdalam pembuktian berbasis data."
+    }
+  ],
+  "fallback": {
+    "id": "analyst_in_training",
+    "label": "ANALIS DALAM PELATIHAN",
+    "desc": "Kamu telah menjalani sidang, tetapi pola kerjamu belum konsisten. Ulangi kasus dan perhatikan bukti yang terlewat.",
+    "advice": "Mulai dari memindai seluruh berkas sebelum memutus."
+  },
+  "finals": [
+    {
+      "min": 81,
+      "title": "PENJAGA KEADILAN ALGORITMA",
+      "text": "Seluruh sidang tuntas dengan penalaran kuat. Kamu memahami bahwa manusia tetap bertanggung jawab atas keputusan akhir."
+    },
+    {
+      "min": 51,
+      "title": "EVALUATOR TERSERTIFIKASI",
+      "text": "Kamu mampu menilai keputusan AI dengan bukti. Perdalam analisis bukti kunci untuk naik ke tingkat berikutnya."
+    },
+    {
+      "min": 0,
+      "title": "ANALIS DALAM PELATIHAN",
+      "text": "Kamu telah menyelesaikan semua sidang. Ulangi kasus dan pindai lebih banyak bukti sebelum memutus."
+    }
+  ],
+  "badges": [
+    {
+      "id": "data_fairness",
+      "label": "DATA FAIRNESS ANALYST",
+      "desc": "Membuktikan bahwa data yang hilang dapat menciptakan ketidakadilan.",
+      "condition": {
+        "type": "case_ethics",
+        "caseId": "case001",
+        "min": 30
+      }
+    },
+    {
+      "id": "algorithm_inspector",
+      "label": "ALGORITHM INSPECTOR",
+      "desc": "Menemukan bias performa model pada kelompok tertentu.",
+      "condition": {
+        "type": "case_ethics",
+        "caseId": "case002",
+        "min": 30
+      }
+    },
+    {
+      "id": "human_decision",
+      "label": "HUMAN DECISION EXPERT",
+      "desc": "Menjaga otonomi manusia atas rekomendasi AI.",
+      "condition": {
+        "type": "case_ethics",
+        "caseId": "case003",
+        "min": 30
+      }
+    },
+    {
+      "id": "justice_master",
+      "label": "AI JUSTICE MASTER",
+      "desc": "Menuntaskan sidang akhir dengan mempertahankan pengawasan manusia.",
+      "condition": {
+        "type": "case_ethics",
+        "caseId": "case004",
+        "min": 30
+      }
+    },
+    {
+      "id": "thorough_eye",
+      "label": "MATA TELITI",
+      "desc": "Memindai SELURUH berkas bukti dalam satu sidang — termasuk yang ternyata tidak relevan.",
+      "condition": {
+        "type": "full_scan"
+      }
+    },
+    {
+      "id": "relentless",
+      "label": "PENANYA TAK KENAL LELAH",
+      "desc": "Mengajukan seluruh pertanyaan interogasi dalam satu sidang.",
+      "condition": {
+        "type": "full_interview"
+      }
+    },
+    {
+      "id": "clean_chain",
+      "label": "RANTAI BUKTI SEMPURNA",
+      "desc": "Memilih seluruh bukti kunci dengan tepat pada analisis pertama.",
+      "condition": {
+        "type": "perfect_analysis"
+      }
+    },
+    {
+      "id": "no_shortcut",
+      "label": "TANPA JALAN PINTAS",
+      "desc": "Menyelesaikan satu sidang dengan bukti lengkap, interogasi penuh, dan putusan bertanggung jawab.",
+      "condition": {
+        "type": "complete_case"
+      }
+    }
+  ]
+}

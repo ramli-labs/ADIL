@@ -1,0 +1,202 @@
+{
+  "case001": {
+    "question": "Sebagai AI Justice Analyst, apa putusanmu atas kasus SELEKSI-9?",
+    "options": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "AI salah dan sengaja merugikan Andi.",
+        "score": 10,
+        "tier": "weak",
+        "feedback": "AI tidak memiliki niat. Menyebut AI 'sengaja' menutup akar masalahnya: data dan desain sistem.",
+        "traits": [
+          "surface"
+        ]
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "Keputusan AI bias karena data tidak lengkap. Data ekonomi harus dimasukkan, lalu seleksi diulang dengan pengawasan manusia.",
+        "score": 40,
+        "tier": "best",
+        "feedback": "Tepat. Kamu menunjuk penyebab (data hilang), dampaknya (hasil bias), dan perbaikannya (data lengkap + pengawasan manusia).",
+        "traits": [
+          "responsible",
+          "systemic"
+        ]
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "Sistem AI harus dihapus dari sekolah.",
+        "score": 18,
+        "tier": "mid",
+        "feedback": "Menghapus alat tidak memperbaiki datanya. AI bisa membantu bila variabelnya sesuai tujuan kebijakan.",
+        "traits": [
+          "protective"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "Keputusan sah karena Andi memang peringkat ketiga.",
+        "score": 5,
+        "tier": "weak",
+        "feedback": "Peringkat itu benar secara hitungan, tetapi dihitung dari data yang salah. Adil bukan sekadar konsisten.",
+        "traits": [
+          "surface"
+        ]
+      }
+    ]
+  },
+  "case002": {
+    "question": "Apa putusanmu atas sistem absensi VISI-4?",
+    "options": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "Masalahnya hanya pencahayaan; perbaiki lampu koridor.",
+        "score": 12,
+        "tier": "weak",
+        "feedback": "Pencahayaan memperburuk, tapi tidak menjelaskan mengapa hanya kelompok tertentu yang gagal dikenali.",
+        "traits": [
+          "surface"
+        ]
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "Hentikan sementara keputusan otomatis: latih ulang dengan data beragam, terapkan ambang keyakinan, dan buka jalur banding manusia.",
+        "score": 40,
+        "tier": "best",
+        "feedback": "Tepat. Kamu menangani ketiga lapisan: data, ambang keputusan, dan hak koreksi manusia.",
+        "traits": [
+          "responsible",
+          "systemic"
+        ]
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "Akurasi 96% sudah cukup baik, lanjutkan saja.",
+        "score": 5,
+        "tier": "weak",
+        "feedback": "Rata-rata tinggi tidak berarti adil. Bagi 11 siswa itu, sistem salah 100% dari waktu ke waktu.",
+        "traits": [
+          "surface"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "Kembali ke absensi manual sepenuhnya.",
+        "score": 20,
+        "tier": "mid",
+        "feedback": "Aman, tapi melewatkan peluang perbaikan. AI yang diaudit dan diawasi manusia bisa lebih adil daripada dihapus.",
+        "traits": [
+          "protective"
+        ]
+      }
+    ]
+  },
+  "case003": {
+    "question": "Apa putusanmu atas penggunaan JALUR-7?",
+    "options": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "AI 78% akurat, jadi siswa sebaiknya menuruti rekomendasinya.",
+        "score": 8,
+        "tier": "weak",
+        "feedback": "Akurasi statistik terhadap kelompok tidak memberi hak menentukan hidup satu individu.",
+        "traits": [
+          "surface"
+        ]
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "Rekomendasi AI tetap dipakai, tetapi hanya sebagai bahan diskusi. Keputusan akhir milik siswa bersama guru dan orang tua, dan jalur banding wajib tersedia.",
+        "score": 40,
+        "tier": "best",
+        "feedback": "Tepat. Kamu mempertahankan manfaat AI sekaligus mengembalikan hak keputusan kepada manusia.",
+        "traits": [
+          "responsible",
+          "systemic"
+        ]
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "Larang semua penasihat karier AI di sekolah.",
+        "score": 18,
+        "tier": "mid",
+        "feedback": "Masalahnya cara pakai, bukan keberadaan alat. Sebagai bahan diskusi, sistem ini masih berguna.",
+        "traits": [
+          "protective"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "Buat pengecualian khusus untuk Sinta saja.",
+        "score": 16,
+        "tier": "mid",
+        "feedback": "Adil untuk satu orang, tapi 1.399 siswa lain tetap terikat aturan yang sama. Perbaiki kebijakannya.",
+        "traits": [
+          "protective"
+        ]
+      }
+    ]
+  },
+  "case004": {
+    "question": "Sidang akhir: apa putusanmu atas SANKSI-1 dan kasus Rio?",
+    "options": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "Jalankan skors. Aturan harus konsisten untuk semua siswa.",
+        "score": 6,
+        "tier": "weak",
+        "feedback": "Konsistensi tanpa konteks bukan keadilan. Aturan yang sama diterapkan pada keadaan berbeda menghasilkan hasil tidak adil.",
+        "traits": [
+          "surface"
+        ]
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "Batalkan skors, bantu keluarga Rio, dan wajibkan sistem menyertakan kolom konteks serta keputusan akhir yang ditinjau dan ditandatangani manusia dengan alasan tertulis.",
+        "score": 40,
+        "tier": "best",
+        "feedback": "Putusan seorang AI Justice Expert. Kamu memperbaiki kasus ini sekaligus sistem yang memproduksinya.",
+        "traits": [
+          "responsible",
+          "systemic"
+        ]
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "Matikan SANKSI-1 di 40 sekolah secara permanen.",
+        "score": 20,
+        "tier": "mid",
+        "feedback": "Melindungi siswa, tetapi tanpa memperbaiki proses. Tanpa aturan baru, sistem berikutnya akan mengulang kesalahan yang sama.",
+        "traits": [
+          "protective"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "Turunkan skors menjadi 3 hari sebagai kompromi.",
+        "score": 14,
+        "tier": "weak",
+        "feedback": "Menawar angka tanpa menyentuh sebabnya. Rio tidak melakukan pelanggaran yang layak dihukum — ia merawat ibunya.",
+        "traits": [
+          "surface"
+        ]
+      }
+    ]
+  }
+}

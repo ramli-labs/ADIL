@@ -1,0 +1,234 @@
+[
+  {
+    "id": "case001",
+    "case_code": "ADIL-001",
+    "title": "BEASISWA YANG BERAT SEBELAH",
+    "title_en": "The Biased Scholarship",
+    "topic": "DATA BIAS",
+    "principles": [
+      "AI BIAS",
+      "FAIRNESS",
+      "TRANSPARENCY"
+    ],
+    "difficulty": "TINGKAT 1",
+    "room": "RUANG INVESTIGASI 01 — ARSIP AKADEMIK",
+    "environment": "assets/environments/archive_room.png",
+    "briefing": "SMP Nusantara 2035 memakai sistem AI bernama SELEKSI-9 untuk memilih penerima beasiswa. Tiga siswa mendaftar. AI menerima Budi dan Citra, menolak Andi. Wali kelas Andi mengajukan keberatan resmi ke ADIL Academy.",
+    "background": [
+      {
+        "label": "DITERIMA",
+        "value": "Budi, Citra"
+      },
+      {
+        "label": "DITOLAK",
+        "value": "Andi"
+      },
+      {
+        "label": "SISTEM",
+        "value": "SELEKSI-9 v2.1"
+      }
+    ],
+    "ai_decision": {
+      "system": "SELEKSI-9 v2.1",
+      "output": "Menerima Budi dan Citra, menolak Andi.",
+      "basis": "Peringkat dari nilai rapor, kehadiran, dan nilai ujian masuk.",
+      "confidence": 0.71,
+      "benefit": "Menyaring 240 berkas dalam 4 menit — pekerjaan yang butuh berhari-hari bagi panitia manusia."
+    },
+    "ethical_issues": [
+      "Variabel penentu kebijakan tidak ada dalam data.",
+      "Tujuan program dan metrik model tidak sejalan.",
+      "Tidak ada jalur banding bagi pendaftar yang ditolak."
+    ],
+    "intro_dialogue": "case001_intro",
+    "evidence_set": "case001",
+    "interview_set": "case001",
+    "analysis": {
+      "prompt": "Rangkai berkas kunci menjadi satu kesimpulan. Pilih 3 bukti yang membuktikan keputusan AI tidak adil.",
+      "pick": 3,
+      "key": [
+        "e1",
+        "e3",
+        "e5"
+      ],
+      "conclusion": "Tujuan beasiswa menyasar siswa kurang mampu, tetapi data ekonomi tidak pernah masuk ke sistem — sehingga AI mengambil keputusan tanpa informasi yang paling menentukan."
+    },
+    "verdict_set": "case001",
+    "learning_ref": "case001",
+    "ending_dialogue": "case001_closing"
+  },
+  {
+    "id": "case002",
+    "case_code": "ADIL-002",
+    "title": "SISWA YANG TAK TERLIHAT",
+    "title_en": "The Invisible Student",
+    "topic": "ALGORITHMIC BIAS",
+    "principles": [
+      "AI BIAS",
+      "FAIRNESS",
+      "ACCOUNTABILITY"
+    ],
+    "difficulty": "TINGKAT 2",
+    "room": "RUANG INVESTIGASI 02 — LAB PENGENALAN VISUAL",
+    "environment": "assets/environments/vision_lab.png",
+    "briefing": "Sistem absensi pengenalan wajah VISI-4 menandai 11 siswa sebagai 'tidak hadir' padahal mereka berada di kelas. Sebagian siswa terkena berulang kali selama tiga minggu dan nilai kedisiplinannya turun.",
+    "background": [
+      {
+        "label": "SISWA TERDAMPAK",
+        "value": "11 dari 240"
+      },
+      {
+        "label": "DURASI",
+        "value": "3 minggu"
+      },
+      {
+        "label": "SISTEM",
+        "value": "VISI-4 v1.0"
+      }
+    ],
+    "ai_decision": {
+      "system": "VISI-4 v1.0",
+      "output": "11 siswa ditandai tidak hadir padahal berada di kelas.",
+      "basis": "Kemiripan wajah terhadap pola data latih, ambang 0,60.",
+      "confidence": 0.52,
+      "benefit": "Mempercepat absensi 240 siswa dari 12 menit menjadi 40 detik setiap pagi."
+    },
+    "ethical_issues": [
+      "Performa model tidak setara antar kelompok siswa.",
+      "Keputusan tetap diambil pada keyakinan rendah.",
+      "Kesalahan sistem langsung menjadi catatan permanen."
+    ],
+    "intro_dialogue": "case002_intro",
+    "evidence_set": "case002",
+    "interview_set": "case002",
+    "analysis": {
+      "prompt": "Susun rantai sebab-akibat bias algoritmik. Pilih 3 bukti utama.",
+      "pick": 3,
+      "key": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "conclusion": "Data latih yang tidak beragam menghasilkan akurasi tidak setara antar kelompok, dan sistem tetap memutuskan meski keyakinannya rendah — kesalahan pun menjadi catatan resmi."
+    },
+    "verdict_set": "case002",
+    "learning_ref": "case002",
+    "ending_dialogue": "case002_closing"
+  },
+  {
+    "id": "case003",
+    "case_code": "ADIL-003",
+    "title": "MASA DEPAN YANG DITENTUKAN AI",
+    "title_en": "The AI Future",
+    "topic": "HUMAN AUTONOMY",
+    "principles": [
+      "HUMAN AUTONOMY",
+      "TRANSPARENCY",
+      "PRIVACY"
+    ],
+    "difficulty": "TINGKAT 3",
+    "room": "RUANG INVESTIGASI 03 — PUSAT BIMBINGAN KARIER",
+    "environment": "assets/environments/guidance_center.png",
+    "briefing": "Penasihat karier AI bernama JALUR-7 memberi rekomendasi jurusan pada 1.400 siswa kelas IX. Sekolah menjadikan rekomendasi itu sebagai syarat pendaftaran. Sinta, yang bercita-cita jadi dokter, diarahkan ke jalur teknik dan ditolak saat mendaftar kelas biologi lanjutan.",
+    "background": [
+      {
+        "label": "SISWA DIARAHKAN",
+        "value": "1.400"
+      },
+      {
+        "label": "KASUS BANDING",
+        "value": "Sinta, kelas IX-B"
+      },
+      {
+        "label": "SISTEM",
+        "value": "JALUR-7 v3.4"
+      }
+    ],
+    "ai_decision": {
+      "system": "JALUR-7 v3.4",
+      "output": "Sinta diarahkan ke jalur teknik, bukan kedokteran.",
+      "basis": "Nilai mata pelajaran, pola belajar daring, dan jalur lulusan sebelumnya.",
+      "confidence": 0.78,
+      "benefit": "Membantu siswa yang belum punya gambaran jurusan untuk mulai menjajaki pilihan."
+    },
+    "ethical_issues": [
+      "Rekomendasi statistik dijadikan syarat mengikat.",
+      "Model mengulang pola pilihan generasi sebelumnya.",
+      "Automation bias membuat siswa menyerahkan pilihannya."
+    ],
+    "intro_dialogue": "case003_intro",
+    "evidence_set": "case003",
+    "interview_set": "case003",
+    "analysis": {
+      "prompt": "Buktikan pelanggaran otonomi manusia. Pilih 3 bukti utama.",
+      "pick": 3,
+      "key": [
+        "e1",
+        "e3",
+        "e5"
+      ],
+      "conclusion": "Sekolah mengubah saran statistik menjadi syarat mengikat, sementara motivasi nyata siswa tidak pernah tercatat — dan tekanan keluaran AI membuat siswa menyerahkan pilihannya sendiri."
+    },
+    "verdict_set": "case003",
+    "learning_ref": "case003",
+    "ending_dialogue": "case003_closing"
+  },
+  {
+    "id": "case004",
+    "case_code": "ADIL-004",
+    "title": "HAKIM ALGORITMA",
+    "title_en": "The AI Judge",
+    "topic": "HUMAN OVERSIGHT",
+    "principles": [
+      "HUMAN OVERSIGHT",
+      "ACCOUNTABILITY",
+      "FAIRNESS"
+    ],
+    "difficulty": "SIDANG AKHIR",
+    "room": "RUANG SIDANG UTAMA — ADIL ACADEMY",
+    "environment": "assets/environments/main_courtroom.png",
+    "briefing": "Sistem SANKSI-1 merekomendasikan hukuman untuk pelanggaran kedisiplinan di 40 sekolah. Rio, kelas VIII, direkomendasikan diskors 14 hari karena tercatat 6 pelanggaran keterlambatan. Sidang akhir ADIL memeriksa apakah AI boleh menentukan sanksi bagi manusia.",
+    "background": [
+      {
+        "label": "REKOMENDASI",
+        "value": "Skors 14 hari"
+      },
+      {
+        "label": "CATATAN",
+        "value": "6 pelanggaran"
+      },
+      {
+        "label": "SISTEM",
+        "value": "SANKSI-1 v5.0"
+      }
+    ],
+    "ai_decision": {
+      "system": "SANKSI-1 v5.0",
+      "output": "Rekomendasi skors 14 hari untuk Rio.",
+      "basis": "Pemetaan jumlah pelanggaran ke tabel sanksi.",
+      "confidence": 0.94,
+      "benefit": "Memastikan sanksi tercatat konsisten, tidak dipengaruhi rasa suka atau tidak suka guru."
+    },
+    "ethical_issues": [
+      "Sistem tidak menyediakan kolom konteks.",
+      "Persetujuan guru hanya formalitas (rata-rata 8 detik).",
+      "Dampak jangka panjang tidak diperhitungkan."
+    ],
+    "intro_dialogue": "case004_intro",
+    "evidence_set": "case004",
+    "interview_set": "case004",
+    "analysis": {
+      "prompt": "Sidang akhir. Pilih 3 bukti yang membuktikan pengawasan manusia telah gagal.",
+      "pick": 3,
+      "key": [
+        "e2",
+        "e3",
+        "e5"
+      ],
+      "conclusion": "Sistem tidak punya ruang untuk konteks, konteks Rio memang ada tetapi di luar sistem, dan guru menyetujui rekomendasi dalam 8 detik — jadi tidak ada manusia yang benar-benar memutuskan."
+    },
+    "verdict_set": "case004",
+    "learning_ref": "case004",
+    "ending_dialogue": "case004_closing"
+  }
+]

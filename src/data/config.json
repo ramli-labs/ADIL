@@ -1,0 +1,74 @@
+{
+  "game": {
+    "id": "adil",
+    "title": "ADIL — THE AI TRIAL",
+    "subtitle": "AI Decision Intelligence & Logic",
+    "year_setting": 2035,
+    "player_role": "AI JUSTICE ANALYST",
+    "language": "id-ID",
+    "version": "1.0.0"
+  },
+  "weights": {
+    "evidence": 35,
+    "reasoning": 25,
+    "ethics": 40
+  },
+  "thresholds": {
+    "min_evidence_to_analyse": 3,
+    "badge_ethics_min": 30
+  },
+  "ranks": [
+    {
+      "min": 0,
+      "max": 50,
+      "id": "user",
+      "label": "AI USER",
+      "desc": "Kamu memakai AI, tapi belum menguji keputusannya."
+    },
+    {
+      "min": 51,
+      "max": 80,
+      "id": "evaluator",
+      "label": "AI EVALUATOR",
+      "desc": "Kamu mulai mampu menilai keputusan AI dengan bukti."
+    },
+    {
+      "min": 81,
+      "max": 100,
+      "id": "expert",
+      "label": "AI JUSTICE EXPERT",
+      "desc": "Kamu mampu menjaga keadilan dalam sistem AI."
+    }
+  ],
+  "theme": {
+    "colors": {
+      "navy": "#081A33",
+      "navy_deep": "#050e1c",
+      "gold": "#D4AF37",
+      "cyan": "#00D9FF",
+      "white": "#FFFFFF",
+      "gray": "#AAB7C4",
+      "nara": "#C7A6FF"
+    },
+    "fonts": {
+      "heading": "Orbitron",
+      "body": "Inter",
+      "mono": "JetBrains Mono"
+    }
+  },
+  "audio": {
+    "music_volume": 0.35,
+    "voice_volume": 0.9,
+    "sfx_volume": 0.7,
+    "prevent_overlapping_voice": true
+  },
+  "save": {
+    "key": "adil.save.v3",
+    "autosave": true
+  },
+  "teacher_mode": {
+    "enabled": true,
+    "default_visible": false,
+    "show_after_verdict": true
+  }
+}

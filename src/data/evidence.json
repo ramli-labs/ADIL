@@ -1,0 +1,250 @@
+{
+  "case001": [
+    {
+      "id": "e1",
+      "title": "LAPORAN DATASET",
+      "type": "DATA",
+      "description": "Dataset pelatihan hanya memuat kolom: nilai rapor, kehadiran, dan nilai ujian masuk.",
+      "finding": "Tidak ada kolom kondisi ekonomi keluarga.",
+      "impact": "HIGH",
+      "learningConcept": "AI tidak dapat menilai informasi yang tidak ada dalam datanya.",
+      "relevant": true
+    },
+    {
+      "id": "e2",
+      "title": "RAPOR ANDI",
+      "type": "DOKUMEN",
+      "description": "Rata-rata nilai Andi 88,4 — tertinggi di antara tiga pendaftar.",
+      "finding": "Prestasi akademik Andi justru paling tinggi.",
+      "impact": "HIGH",
+      "learningConcept": "Hasil AI yang berlawanan dengan bukti kuat wajib diperiksa ulang.",
+      "relevant": true
+    },
+    {
+      "id": "e3",
+      "title": "SURAT KETERANGAN EKONOMI",
+      "type": "DOKUMEN",
+      "description": "Penghasilan keluarga Andi Rp1,2 juta/bulan. Surat diserahkan ke sekolah dalam bentuk kertas.",
+      "finding": "Dokumen tidak pernah didigitalkan, jadi tidak masuk sistem.",
+      "impact": "HIGH",
+      "learningConcept": "Data yang tidak terekam sama dengan data yang tidak dianggap ada.",
+      "relevant": true
+    },
+    {
+      "id": "e4",
+      "title": "LOG KEHADIRAN",
+      "type": "LOG",
+      "description": "Kehadiran Andi 94%, Budi 97%, Citra 96%.",
+      "finding": "Selisih kehadiran sangat kecil dan tidak menjelaskan penolakan.",
+      "impact": "LOW",
+      "learningConcept": "Perbedaan kecil pada satu variabel bukan bukti kuat.",
+      "relevant": false
+    },
+    {
+      "id": "e5",
+      "title": "TUJUAN PROGRAM BEASISWA",
+      "type": "KEBIJAKAN",
+      "description": "Dokumen resmi: beasiswa ditujukan untuk siswa berprestasi dari keluarga kurang mampu.",
+      "finding": "Tujuan kebijakan tidak sejalan dengan variabel yang dipakai AI.",
+      "impact": "HIGH",
+      "learningConcept": "Metrik AI harus mencerminkan tujuan kebijakan manusia.",
+      "relevant": true
+    },
+    {
+      "id": "e6",
+      "title": "JADWAL SERVER",
+      "type": "TEKNIS",
+      "description": "Pemeliharaan server dilakukan dua hari sebelum seleksi.",
+      "finding": "Tidak ditemukan kegagalan proses saat seleksi berjalan.",
+      "impact": "LOW",
+      "learningConcept": "Bukti teknis yang tidak berhubungan bisa mengalihkan penyelidikan.",
+      "relevant": false
+    }
+  ],
+  "case002": [
+    {
+      "id": "e1",
+      "title": "AKURASI PER KELOMPOK",
+      "type": "DATA",
+      "description": "Akurasi 98,1% untuk siswa berkulit terang; 79,4% untuk siswa berkulit gelap; 84% untuk siswa berhijab.",
+      "finding": "Performa jatuh drastis pada kelompok tertentu.",
+      "impact": "HIGH",
+      "learningConcept": "Akurasi rata-rata dapat menyembunyikan kegagalan pada subkelompok.",
+      "relevant": true
+    },
+    {
+      "id": "e2",
+      "title": "KOMPOSISI DATASET LATIH",
+      "type": "DATA",
+      "description": "82% wajah pada data latih berasal dari satu rentang warna kulit; hanya 3% memakai penutup kepala.",
+      "finding": "Data latih tidak mewakili keragaman siswa nyata.",
+      "impact": "HIGH",
+      "learningConcept": "Model hanya sepandai keragaman data latihnya.",
+      "relevant": true
+    },
+    {
+      "id": "e3",
+      "title": "LAPORAN CONFIDENCE",
+      "type": "LOG",
+      "description": "Pada 11 siswa terdampak, skor keyakinan rata-rata 0,52 — sistem tetap memutuskan 'tidak dikenali'.",
+      "finding": "Sistem mengambil keputusan final pada keyakinan rendah tanpa verifikasi manusia.",
+      "impact": "HIGH",
+      "learningConcept": "Keputusan berdampak tinggi butuh ambang keyakinan dan verifikasi manusia.",
+      "relevant": true
+    },
+    {
+      "id": "e4",
+      "title": "KONDISI KAMERA",
+      "type": "TEKNIS",
+      "description": "Pencahayaan koridor 180 lux, di bawah rekomendasi 300 lux. Kamera menghadap jendela.",
+      "finding": "Kondisi pemasangan memperburuk, tetapi tidak menjelaskan pola per kelompok.",
+      "impact": "MEDIUM",
+      "learningConcept": "Faktor lingkungan dapat memperkuat bias, bukan menjadi penyebab tunggalnya.",
+      "relevant": false
+    },
+    {
+      "id": "e5",
+      "title": "PROSEDUR BANDING",
+      "type": "KEBIJAKAN",
+      "description": "Tidak ada mekanisme bagi siswa untuk mengoreksi absensi yang salah.",
+      "finding": "Kesalahan sistem langsung menjadi catatan permanen.",
+      "impact": "HIGH",
+      "learningConcept": "Sistem otomatis wajib menyediakan jalur koreksi bagi manusia.",
+      "relevant": true
+    },
+    {
+      "id": "e6",
+      "title": "JADWAL PEMBARUAN MODEL",
+      "type": "TEKNIS",
+      "description": "Model belum pernah dilatih ulang sejak dipasang 14 bulan lalu.",
+      "finding": "Tidak ada evaluasi berkala terhadap keadilan model.",
+      "impact": "MEDIUM",
+      "learningConcept": "Audit keadilan harus rutin, bukan sekali saat peluncuran.",
+      "relevant": false
+    }
+  ],
+  "case003": [
+    {
+      "id": "e1",
+      "title": "KEBIJAKAN SEKOLAH",
+      "type": "KEBIJAKAN",
+      "description": "Surat edaran: pendaftaran kelas lanjutan 'harus sesuai rekomendasi JALUR-7'.",
+      "finding": "Rekomendasi berubah menjadi keputusan yang mengikat.",
+      "impact": "HIGH",
+      "learningConcept": "Rekomendasi AI bukan pengganti keputusan manusia.",
+      "relevant": true
+    },
+    {
+      "id": "e2",
+      "title": "VARIABEL MODEL",
+      "type": "DATA",
+      "description": "Model memakai nilai mata pelajaran, pola klik saat belajar daring, dan jurusan lulusan dari sekolah yang sama.",
+      "finding": "Model belajar dari pola masa lalu dan mengulanginya.",
+      "impact": "HIGH",
+      "learningConcept": "AI memperkuat pola historis, termasuk keterbatasan pilihan generasi sebelumnya.",
+      "relevant": true
+    },
+    {
+      "id": "e3",
+      "title": "WAWANCARA SINTA",
+      "type": "DOKUMEN",
+      "description": "Sinta mengikuti klub biologi 3 tahun, magang di puskesmas, dan menulis esai kedokteran.",
+      "finding": "Motivasi dan pengalaman ini tidak pernah masuk ke sistem.",
+      "impact": "HIGH",
+      "learningConcept": "Cita-cita dan usaha manusia tidak selalu bisa diukur oleh data.",
+      "relevant": true
+    },
+    {
+      "id": "e4",
+      "title": "AKURASI PREDIKSI",
+      "type": "DATA",
+      "description": "Validasi internal menunjukkan model benar pada 78% kasus lulusan sebelumnya.",
+      "finding": "Model relatif akurat, sehingga masalahnya bukan ketepatan.",
+      "impact": "MEDIUM",
+      "learningConcept": "Sistem yang akurat tetap bisa dipakai secara tidak etis.",
+      "relevant": false
+    },
+    {
+      "id": "e5",
+      "title": "SURVEI SISWA",
+      "type": "DOKUMEN",
+      "description": "61% siswa menyatakan mengubah cita-citanya setelah membaca rekomendasi AI.",
+      "finding": "Saran AI memiliki daya tekan psikologis yang besar.",
+      "impact": "HIGH",
+      "learningConcept": "Automation bias: manusia cenderung menganggap keluaran mesin lebih benar.",
+      "relevant": true
+    },
+    {
+      "id": "e6",
+      "title": "BIAYA LISENSI",
+      "type": "TEKNIS",
+      "description": "Sekolah membayar Rp240 juta per tahun untuk sistem ini.",
+      "finding": "Tidak relevan dengan keadilan keputusan.",
+      "impact": "LOW",
+      "learningConcept": "Biaya sistem tidak menentukan benar atau salahnya keputusan.",
+      "relevant": false
+    }
+  ],
+  "case004": [
+    {
+      "id": "e1",
+      "title": "CATATAN PELANGGARAN",
+      "type": "LOG",
+      "description": "Enam kali terlambat, semuanya antara 07.15–07.25, seluruhnya pada hari Selasa dan Kamis.",
+      "finding": "Pola keterlambatan sangat teratur — menandakan sebab struktural.",
+      "impact": "HIGH",
+      "learningConcept": "Pola dalam data adalah petunjuk, bukan kesimpulan.",
+      "relevant": true
+    },
+    {
+      "id": "e2",
+      "title": "SURAT RUMAH SAKIT",
+      "type": "DOKUMEN",
+      "description": "Rio mengantar ibunya cuci darah setiap Selasa dan Kamis pagi sejak Januari.",
+      "finding": "Konteks kemanusiaan yang tidak ada dalam sistem.",
+      "impact": "HIGH",
+      "learningConcept": "AI tidak memahami konteks hidup manusia di balik angka.",
+      "relevant": true
+    },
+    {
+      "id": "e3",
+      "title": "TABEL SANKSI OTOMATIS",
+      "type": "KEBIJAKAN",
+      "description": "Sistem memetakan jumlah pelanggaran ke lama skors tanpa kolom keterangan atau keringanan.",
+      "finding": "Desain sistem tidak menyediakan ruang untuk konteks.",
+      "impact": "HIGH",
+      "learningConcept": "Keputusan yang menyangkut hak manusia tidak boleh sepenuhnya otomatis.",
+      "relevant": true
+    },
+    {
+      "id": "e4",
+      "title": "DAMPAK SKORS",
+      "type": "DATA",
+      "description": "Studi 2033: skors panjang meningkatkan risiko putus sekolah 3,4 kali.",
+      "finding": "Sanksi yang direkomendasikan berpotensi merusak masa depan siswa.",
+      "impact": "HIGH",
+      "learningConcept": "Keputusan harus dinilai dari dampaknya, bukan hanya kepatuhan aturan.",
+      "relevant": true
+    },
+    {
+      "id": "e5",
+      "title": "LOG PERSETUJUAN",
+      "type": "LOG",
+      "description": "Dalam 12 bulan, 97% rekomendasi SANKSI-1 disetujui guru tanpa perubahan, rata-rata dalam 8 detik.",
+      "finding": "Pengawasan manusia ada di atas kertas, tidak dalam praktik.",
+      "impact": "HIGH",
+      "learningConcept": "Rubber-stamping: pengawasan yang tidak bermakna sama dengan tanpa pengawasan.",
+      "relevant": true
+    },
+    {
+      "id": "e6",
+      "title": "VERSI PERANGKAT LUNAK",
+      "type": "TEKNIS",
+      "description": "Sistem diperbarui ke v5.0 tiga bulan lalu tanpa perubahan tabel sanksi.",
+      "finding": "Tidak berkaitan langsung dengan kasus Rio.",
+      "impact": "LOW",
+      "learningConcept": "Tidak semua detail teknis merupakan bukti.",
+      "relevant": false
+    }
+  ]
+}

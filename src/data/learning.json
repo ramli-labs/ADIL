@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "curriculum": "Informatika SMP — Dampak Sosial Informatika & Berpikir Komputasional",
+    "grade": "Kelas VII–IX",
+    "total_duration": "4 × 40 menit (1 kasus per pertemuan) atau 2 × 80 menit",
+    "competency": "Peserta didik mampu mengevaluasi keputusan sistem AI secara kritis, mengenali bias data dan algoritma, serta menjelaskan mengapa tanggung jawab akhir tetap berada pada manusia."
+  },
+  "cases": {
+    "case001": {
+      "principle": "AI BIAS & TRANSPARANSI DATA",
+      "objectives": [
+        "Menjelaskan bahwa AI hanya dapat menilai informasi yang tersedia dalam datanya.",
+        "Mengidentifikasi variabel yang hilang pada sebuah dataset keputusan.",
+        "Menghubungkan tujuan kebijakan dengan metrik yang dipakai sistem."
+      ],
+      "duration": "40 menit",
+      "takeaway": "AI tidak dapat menilai informasi yang tidak ada dalam datasetnya. Keadilan sebuah keputusan AI dimulai dari pertanyaan: data apa yang hilang?",
+      "reflection_questions": [
+        "Data apa yang tidak pernah masuk ke sistem, dan siapa yang dirugikan karenanya?",
+        "Apakah AI melakukan kesalahan, atau manusia yang salah memilih variabel?",
+        "Bagaimana cara sekolah memastikan data ekonomi tercatat tanpa mempermalukan siswa?"
+      ],
+      "discussion_prompts": [
+        "Bagi kelas menjadi dua kubu: satu membela panitia beasiswa, satu mewakili Andi. Debat 10 menit, lalu cari solusi bersama.",
+        "Minta siswa menuliskan 3 variabel yang menurut mereka wajib ada dalam dataset beasiswa, lalu bandingkan antar kelompok.",
+        "Diskusikan: jika kamu yang merancang SELEKSI-9, kolom apa yang kamu tambahkan dan mengapa?"
+      ],
+      "reflection_activity": "Siswa menulis satu paragraf: 'Satu keputusan di sekolahku yang sebaiknya TIDAK diserahkan pada AI, dan alasannya.'",
+      "misconceptions": [
+        {
+          "wrong": "AI sengaja membenci siswa miskin.",
+          "right": "AI tidak punya niat. Ia mengulang pola data yang diberikan manusia."
+        },
+        {
+          "wrong": "Kalau hasilnya salah, AI harus dihapus.",
+          "right": "Yang perlu diperbaiki adalah data dan pengawasannya, bukan sekadar menghapus alatnya."
+        }
+      ]
+    },
+    "case002": {
+      "principle": "BIAS ALGORITMIK & AKUNTABILITAS",
+      "objectives": [
+        "Membedakan akurasi rata-rata dengan akurasi per kelompok.",
+        "Menjelaskan hubungan keragaman data latih dengan keadilan model.",
+        "Menilai perlunya ambang keyakinan dan verifikasi manusia."
+      ],
+      "duration": "40 menit",
+      "takeaway": "Model hanya seadil data latihnya. Akurasi wajib diukur per kelompok, bukan hanya rata-rata.",
+      "reflection_questions": [
+        "Mengapa angka 96% bisa menyesatkan bagi 11 siswa yang selalu gagal dikenali?",
+        "Siapa yang bertanggung jawab ketika sistem salah: pembuat, sekolah, atau guru yang memakainya?",
+        "Apa yang seharusnya dilakukan sistem ketika keyakinannya hanya 0,52?"
+      ],
+      "discussion_prompts": [
+        "Hitung bersama: bila 11 dari 240 siswa gagal dikenali setiap hari selama 3 minggu, berapa total catatan salah yang tercipta?",
+        "Minta siswa merancang 'prosedur banding absensi' dalam 5 langkah.",
+        "Diskusikan pengalaman nyata siswa: pernahkah teknologi (filter kamera, sensor, absensi) gagal mengenali mereka?"
+      ],
+      "reflection_activity": "Siswa membuat poster satu halaman: 'Cara Menguji Apakah Sebuah Sistem Adil' berisi minimal 3 langkah pengujian.",
+      "misconceptions": [
+        {
+          "wrong": "Akurasi tinggi berarti sistem adil.",
+          "right": "Rata-rata tinggi bisa menyembunyikan kegagalan total pada kelompok kecil."
+        },
+        {
+          "wrong": "Masalahnya hanya kamera atau pencahayaan.",
+          "right": "Faktor teknis memperburuk, tetapi penyebab utamanya data latih yang tidak beragam."
+        }
+      ]
+    },
+    "case003": {
+      "principle": "OTONOMI MANUSIA & PRIVASI",
+      "objectives": [
+        "Membedakan rekomendasi AI dengan keputusan yang mengikat.",
+        "Mengenali automation bias pada diri sendiri.",
+        "Menjelaskan mengapa data historis dapat membatasi pilihan masa depan."
+      ],
+      "duration": "40 menit",
+      "takeaway": "Rekomendasi AI bukan pengganti manusia. Otonomi berarti manusia tetap memegang keputusan atas hidupnya sendiri.",
+      "reflection_questions": [
+        "Apakah kamu akan mengubah cita-citamu jika AI menyarankan jalur lain? Mengapa?",
+        "Data apa tentang dirimu yang tidak bisa diukur mesin, tetapi paling menentukan masa depanmu?",
+        "Kapan sebuah saran berubah menjadi paksaan?"
+      ],
+      "discussion_prompts": [
+        "Survei kilat di kelas: berapa siswa yang akan menuruti saran AI tentang jurusan? Bahas hasilnya.",
+        "Minta siswa menyebut 3 hal tentang dirinya yang tidak terekam di sistem sekolah mana pun.",
+        "Diskusikan: bolehkah sekolah mewajibkan pendaftaran 'sesuai rekomendasi AI'? Susun aturan penggunaan yang lebih adil."
+      ],
+      "reflection_activity": "Siswa menulis 'Surat untuk JALUR-7': menjelaskan siapa dirinya di luar data yang dimiliki sistem.",
+      "misconceptions": [
+        {
+          "wrong": "Kalau AI 78% akurat, sebaiknya diikuti saja.",
+          "right": "Akurasi terhadap kelompok tidak memberi hak menentukan hidup satu individu."
+        },
+        {
+          "wrong": "AI yang memutuskan masa depan Sinta.",
+          "right": "Kebijakan sekolahlah yang mengubah saran menjadi syarat mengikat."
+        }
+      ]
+    },
+    "case004": {
+      "principle": "PENGAWASAN MANUSIA & TANGGUNG JAWAB",
+      "objectives": [
+        "Menjelaskan arti pengawasan manusia yang bermakna (bukan sekadar tanda tangan).",
+        "Mengidentifikasi konteks manusia yang hilang di balik angka.",
+        "Merumuskan syarat sistem otomatis yang menyangkut hak siswa."
+      ],
+      "duration": "40 menit",
+      "takeaway": "Manusia tetap bertanggung jawab atas keputusan akhir. Pengawasan hanya bermakna bila manusia benar-benar memeriksa, memahami konteks, dan berani mengubah keputusan AI.",
+      "reflection_questions": [
+        "Apa arti angka '6 pelanggaran' bila kamu tahu alasannya?",
+        "Menyetujui rekomendasi dalam 8 detik — apakah itu pengawasan?",
+        "Siapa yang harus bertanggung jawab bila rekomendasi AI merugikan seorang siswa?"
+      ],
+      "discussion_prompts": [
+        "Simulasi sidang kelas: 3 siswa jadi panel, 1 jadi Rio, 1 jadi wakil sistem. Panel harus memutus dengan alasan tertulis.",
+        "Susun bersama 'Daftar Periksa Sebelum Menyetujui Keputusan AI' berisi 5 pertanyaan wajib.",
+        "Diskusikan: keputusan sekolah mana yang BOLEH otomatis penuh, dan mana yang WAJIB diputus manusia?"
+      ],
+      "reflection_activity": "Kelas menyusun 'Piagam Penggunaan AI di Sekolah Kami' berisi 5 pasal, ditandatangani bersama.",
+      "misconceptions": [
+        {
+          "wrong": "Aturan yang sama untuk semua berarti adil.",
+          "right": "Aturan sama pada keadaan berbeda dapat menghasilkan hasil yang tidak adil."
+        },
+        {
+          "wrong": "Ada guru yang menyetujui, berarti sudah diawasi.",
+          "right": "Persetujuan tanpa pemeriksaan (rubber-stamping) sama saja dengan tanpa pengawasan."
+        }
+      ]
+    }
+  },
+  "glossary": [
+    {
+      "term": "Bias Data",
+      "def": "Ketimpangan hasil karena data yang dipakai tidak lengkap atau tidak mewakili semua kelompok."
+    },
+    {
+      "term": "Bias Algoritmik",
+      "def": "Perbedaan performa sistem terhadap kelompok yang berbeda."
+    },
+    {
+      "term": "Transparansi",
+      "def": "Kemampuan menjelaskan dasar sebuah keputusan AI kepada orang yang terdampak."
+    },
+    {
+      "term": "Akuntabilitas",
+      "def": "Kejelasan siapa manusia yang bertanggung jawab atas keputusan sistem."
+    },
+    {
+      "term": "Human Oversight",
+      "def": "Pengawasan manusia yang benar-benar memeriksa dan berwenang mengubah keputusan AI."
+    },
+    {
+      "term": "Automation Bias",
+      "def": "Kecenderungan manusia menganggap keluaran mesin lebih benar daripada penilaiannya sendiri."
+    },
+    {
+      "term": "Confidence Score",
+      "def": "Tingkat keyakinan model terhadap keluarannya sendiri, antara 0 dan 1."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+body { margin: 0; background: #050e1c; color: #fff; font-family: Inter, system-ui, sans-serif; }
+a { color: #00D9FF; text-decoration: none; }
+a:hover { color: #D4AF37; }
+::selection { background: #00D9FF; color: #081A33; }
+
+.adil-bg {
+  background:
+    radial-gradient(1200px 700px at 78% -10%, rgba(0,217,255,.16), transparent 60%),
+    radial-gradient(900px 600px at 8% 110%, rgba(212,175,55,.12), transparent 60%),
+    linear-gradient(180deg, #081A33 0%, #050e1c 100%);
+}
+.adil-grid {
+  background-image: linear-gradient(rgba(0,217,255,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,217,255,.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(80% 60% at 50% 40%, #000 20%, transparent 100%);
+}
+.glass { background: rgba(8,26,51,.72); backdrop-filter: blur(14px); }
