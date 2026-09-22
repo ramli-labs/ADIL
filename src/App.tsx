@@ -22,7 +22,7 @@ export default function App() {
         <div className="adil-grid pointer-events-none fixed inset-0 z-0 opacity-35" />
         <InstitutionalHeader />
         <Hud />
-        <main className="relative z-10 flex flex-1 flex-col">
+        <main id="konten" tabIndex={-1} className="relative z-10 flex flex-1 flex-col">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/academy" element={<Academy />} />
