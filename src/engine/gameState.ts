@@ -17,6 +17,10 @@ const emptySave: SaveData = {
 
 function useGameStore() {
   const [save, setSave] = useState<SaveData>(emptySave);
+  /** Save dibaca di effect, jadi render pertama selalu kosong. Penjaga akses kasus
+   *  harus menunggu ini true — kalau tidak, pemain yang membuka URL kasus langsung
+   *  dinilai belum membuka kunci dan dilempar keluar. */
+  const [hydrated, setHydrated] = useState(false);
   const [progress, setProgress] = useState<CaseProgress | null>(null);
   const [phase, setPhaseState] = useState<Phase>("brief");
   const [feedback, setFeedback] = useState<Feedback | null>(null);
@@ -34,6 +38,7 @@ function useGameStore() {
       }
     } catch { /* localStorage tidak tersedia */ }
     setSave(loaded);
+    setHydrated(true);
     audioEngine.init();
     audioEngine.setEnabled(loaded.settings.sound);
     audioEngine.setNarrationEnabled(loaded.settings.narration);
@@ -139,7 +144,7 @@ function useGameStore() {
 
   return {
     cases, characters, config, academyIntro,
-    save, progress, phase, setPhase, feedback, newBadges,
+    save, hydrated, progress, phase, setPhase, feedback, newBadges,
     audioOn: save.settings.sound, toggleAudio,
     narrationOn: save.settings.narration, setNarration,
     reducedMotion: save.settings.reducedMotion, setReducedMotion,

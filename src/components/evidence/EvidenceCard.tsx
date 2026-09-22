@@ -9,11 +9,13 @@ export default function EvidenceCard({
 }: { evidence: Evidence; scanned: boolean; showConcept?: boolean; onScan: () => void }) {
   const color = impactColor(evidence.impact);
   return (
-    <motion.div
+    <motion.button
       layout
+      type="button"
       whileHover={{ y: -3 }}
       onClick={onScan}
-      className={`cursor-pointer border p-4.5 p-[18px] ${scanned ? "border-cyan/45 bg-gradient-to-br from-cyan/[.09] to-navy/50" : "border-haze/20 bg-white/[.02]"}`}
+      aria-label={scanned ? `${evidence.title} — sudah dipindai` : `Pindai berkas ${evidence.title}`}
+      className={`w-full cursor-pointer border p-4.5 p-[18px] text-left ${scanned ? "border-cyan/45 bg-gradient-to-br from-cyan/[.09] to-navy/50" : "border-haze/20 bg-white/[.02]"}`}
     >
       <div className="flex items-center justify-between gap-2">
         <span className="font-mono text-[8.5px] tracking-[.16em] text-haze">{evidence.type}</span>
@@ -32,6 +34,6 @@ export default function EvidenceCard({
       ) : (
         <div className="mt-3.5 font-mono text-[9.5px] tracking-[.16em] text-cyan">▸ PINDAI BERKAS</div>
       )}
-    </motion.div>
+    </motion.button>
   );
 }

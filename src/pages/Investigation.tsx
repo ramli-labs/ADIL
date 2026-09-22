@@ -19,8 +19,9 @@ export default function Investigation() {
   const unlocked = gameCase ? g.isUnlocked(gameCase.id) : false;
 
   useEffect(() => {
-    if (gameCase && !unlocked) { navigate("/cases", { replace: true }); return; }
-    if (gameCase && unlocked && (!g.progress || g.progress.caseId !== gameCase.id)) g.startCase(gameCase.id);
+    if (!g.hydrated || !gameCase) return;
+    if (!unlocked) { navigate("/cases", { replace: true }); return; }
+    if (!g.progress || g.progress.caseId !== gameCase.id) g.startCase(gameCase.id);
   }, [gameCase, unlocked, g, navigate]);
 
   const intro = gameCase ? getDialogue(gameCase.intro_dialogue) : [];
