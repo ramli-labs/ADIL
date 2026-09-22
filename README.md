@@ -7,8 +7,22 @@ dan menilai apakah keputusan sebuah sistem AI sudah adil, transparan, dan bertan
 npm install
 npm run dev
 npm run build      # dist/ siap deploy
+npm test           # uji end-to-end (Playwright); butuh `npx playwright install chromium` sekali
 ```
 Vercel: framework **Vite**, build `npm run build`, output `dist` (`vercel.json` sudah menangani SPA rewrite).
+
+## Bisa dimainkan offline
+Aplikasi ini PWA: shell, sprite, font, dan SFX di-precache (~3,7MB) sehingga **satu sidang penuh
+bisa diselesaikan tanpa internet** — penting untuk lab sekolah yang koneksinya tidak andal.
+Musik latar dan suara karakter (~9MB) sengaja tidak ikut precache agar muat pertama tidak berat;
+keduanya di-cache saat pertama diputar. Font di-host sendiri (`@fontsource`), bukan dari CDN,
+supaya tipografi tidak rontok saat offline.
+
+## Uji
+`tests/` berisi suite end-to-end yang menjalankan aplikasi sungguhan di browser. Setiap spec
+menyebut regresi yang dijaganya — bug yang pernah muncul di proyek ini semuanya bersifat
+tingkat-browser dan senyap (transisi rute macet, modal tertimbun stacking context, gerbang kunci
+yang bisa dilewati), jenis yang tidak terdeteksi oleh unit test pada engine.
 
 ## Arsitektur singkat
 ```
