@@ -36,7 +36,7 @@ export default function Profile() {
               return (
                 <div key={c.id} className="flex items-center justify-between gap-3 border-b border-haze/15 pb-2 text-[12.5px]">
                   <span className="text-[#d7e2ee]">{c.case_code} · {c.title}</span>
-                  <span className={`font-mono text-[10px] ${r ? "text-gold" : "text-haze/50"}`}>{r ? r.total : "—"}</span>
+                  <span className={`font-mono text-[10px] ${r ? "text-gold" : "text-haze/70"}`}>{r ? r.total : "—"}</span>
                 </div>
               );
             })}

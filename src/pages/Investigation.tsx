@@ -166,7 +166,7 @@ export default function Investigation() {
         <div>
           <div className="mb-2.5 font-mono text-[9px] tracking-[.2em] text-cyan">BUKTI TERKUMPUL · {scanned.length}/{evidence.length}</div>
           <div className="flex flex-col gap-1.5">
-            {scanned.length === 0 && <div className="font-mono text-[10px] leading-relaxed text-haze/60">Belum ada bukti dipindai.</div>}
+            {scanned.length === 0 && <div className="font-mono text-[10px] leading-relaxed text-haze/70">Belum ada bukti dipindai.</div>}
             {scanned.map((e) => (
               <div key={e.id} className="flex items-baseline gap-2 border-l-2 border-cyan/50 pl-2.5 text-[12px] text-[#d7e2ee]">
                 <span className="font-mono text-[9px] text-cyan">{e.impact === "HIGH" ? "★" : "•"}</span>
@@ -178,7 +178,7 @@ export default function Investigation() {
         <div>
           <div className="mb-2.5 font-mono text-[9px] tracking-[.2em] text-gold">WAWASAN TERBUKA</div>
           <div className="flex flex-col gap-1.5">
-            {insights.length === 0 && <div className="font-mono text-[10px] leading-relaxed text-haze/60">Interogasi LUMA untuk membuka wawasan.</div>}
+            {insights.length === 0 && <div className="font-mono text-[10px] leading-relaxed text-haze/70">Interogasi LUMA untuk membuka wawasan.</div>}
             {insights.map((m, i) => (
               <div key={i} className="border border-gold/25 bg-gold/[.09] px-2.5 py-2 text-[12px] leading-snug text-white">{m.unlock}</div>
             ))}

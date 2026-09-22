@@ -25,7 +25,7 @@ export default function CaseSelection() {
               className={`flex flex-col border p-5 ${unlocked ? "border-cyan/25 bg-gradient-to-b from-cyan/[.07] to-navy/50" : "border-haze/15 bg-white/[.015] opacity-60"}`}>
               <div className="flex items-center justify-between gap-2.5">
                 <span className="font-mono text-[9.5px] tracking-[.16em] text-gold">{c.case_code}</span>
-                <span className={`border px-2 py-1 font-mono text-[9px] tracking-[.14em] ${record ? "border-gold/50 text-gold" : unlocked ? "border-cyan/45 text-cyan" : "border-haze/25 text-haze/60"}`}>
+                <span className={`border px-2 py-1 font-mono text-[9px] tracking-[.14em] ${record ? "border-gold/50 text-gold" : unlocked ? "border-cyan/45 text-cyan" : "border-haze/25 text-haze/70"}`}>
                   {record ? `SKOR ${record.total}` : unlocked ? "TERBUKA" : "TERKUNCI"}
                 </span>
               </div>

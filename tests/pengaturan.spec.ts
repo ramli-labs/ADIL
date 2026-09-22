@@ -29,6 +29,31 @@ test.describe("pengaturan", () => {
     await expect(page.getByRole("checkbox").first()).not.toBeChecked();
   });
 
+  /**
+   * Regresi: modal sempat tidak menangani keyboard sama sekali — Escape tak berfungsi,
+   * fokus tidak masuk ke dalamnya, dan Tab bocor ke tombol di halaman yang tertutup.
+   */
+  test("bisa ditutup dengan Escape", async ({ page }) => {
+    await page.goto("/");
+    await bukaPengaturan(page);
+    await expect(page.getByRole("dialog", { name: "Pengaturan" })).toBeVisible();
+
+    await page.keyboard.press("Escape");
+    await expect(page.getByRole("dialog", { name: "Pengaturan" })).toBeHidden();
+  });
+
+  test("fokus keyboard tidak keluar dari modal", async ({ page }) => {
+    await page.goto("/");
+    await bukaPengaturan(page);
+
+    for (let i = 0; i < 10; i++) {
+      await page.keyboard.press("Tab");
+      const didalam = await page.evaluate(() =>
+        !!document.activeElement?.closest('[role="dialog"]'));
+      expect(didalam).toBe(true);
+    }
+  });
+
   /** Reset butuh konfirmasi — sekali klik tidak boleh langsung menghapus progres. */
   test("reset progres meminta konfirmasi lebih dulu", async ({ page }) => {
     await page.goto("/");

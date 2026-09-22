@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useGame } from "../../engine/gameState";
+
+const BISA_DIFOKUS = 'button:not([disabled]), input:not([disabled]), a[href]';
 
 function ToggleRow({ label, help, checked, onChange }: { label: string; help: string; checked: boolean; onChange: (v: boolean) => void }) {
   return (
@@ -22,11 +24,33 @@ export default function SettingsModal({ onClose }: { onClose: () => void }) {
   const { audioOn, setSound, narrationOn, setNarration, reducedMotion, setReducedMotion, resetSave } = useGame();
   const [confirmReset, setConfirmReset] = useState(false);
   const navigate = useNavigate();
+  const panel = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const pemicu = document.activeElement as HTMLElement | null;
+    panel.current?.querySelector<HTMLElement>(BISA_DIFOKUS)?.focus();
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { onClose(); return; }
+      if (e.key !== "Tab") return;
+      // Dihitung ulang tiap tekan: daftar tombol berubah saat konfirmasi reset muncul.
+      const isi = panel.current?.querySelectorAll<HTMLElement>(BISA_DIFOKUS);
+      if (!isi?.length) return;
+      const awal = isi[0];
+      const akhir = isi[isi.length - 1];
+      if (e.shiftKey && document.activeElement === awal) { e.preventDefault(); akhir.focus(); }
+      else if (!e.shiftKey && document.activeElement === akhir) { e.preventDefault(); awal.focus(); }
+    };
+
+    document.addEventListener("keydown", onKey);
+    return () => { document.removeEventListener("keydown", onKey); pemicu?.focus(); };
+  }, [onClose]);
 
   return createPortal(
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
       className="fixed inset-0 z-[60] flex items-center justify-center bg-navy-deep/80 px-5 backdrop-blur-sm" onClick={onClose}>
-      <motion.div initial={{ opacity: 0, y: 16, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }}
+      <motion.div ref={panel} role="dialog" aria-modal="true" aria-label="Pengaturan"
+        initial={{ opacity: 0, y: 16, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }}
         className="w-full max-w-md border border-cyan/25 bg-navy-panel p-6" onClick={(e) => e.stopPropagation()}>
         <div className="mb-5 flex items-center justify-between border-b border-haze/15 pb-4">
           <span className="font-display text-[15px] font-bold tracking-[.1em] text-white">PENGATURAN</span>

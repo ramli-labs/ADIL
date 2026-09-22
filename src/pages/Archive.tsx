@@ -34,7 +34,7 @@ export default function Archive() {
         <div className="mb-3 font-mono text-[10px] tracking-[.18em] text-gold">BERKAS TERBUKA</div>
         <div className="grid gap-3.5 sm:grid-cols-2 xl:grid-cols-3">
           {entries.length === 0 && (
-            <div className="border border-dashed border-haze/30 p-6 font-mono text-[11px] leading-loose text-haze/60">
+            <div className="border border-dashed border-haze/30 p-6 font-mono text-[11px] leading-loose text-haze/70">
               ARSIP MASIH KOSONG.<br />Selesaikan satu sidang untuk mengisinya.
             </div>
           )}

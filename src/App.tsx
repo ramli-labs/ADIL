@@ -36,7 +36,7 @@ export default function App() {
           </Routes>
         </main>
         <FeedbackToast />
-        <footer className="relative z-10 flex flex-wrap justify-between gap-4 border-t border-cyan/10 px-6 py-4 font-mono text-[9.5px] tracking-[.14em] text-haze/60">
+        <footer className="relative z-10 flex flex-wrap justify-between gap-4 border-t border-cyan/10 px-6 py-4 font-mono text-[9.5px] tracking-[.14em] text-haze/70">
           <span>ADIL ACADEMY · AI DECISION INTELLIGENCE &amp; LOGIC · SIMULASI EDUKASI SMP</span>
           <span>"AI dapat membuat keputusan dengan cepat, tetapi manusia harus memastikan keputusan itu tetap adil."</span>
         </footer>
