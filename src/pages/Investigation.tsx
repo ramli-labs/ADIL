@@ -16,15 +16,17 @@ export default function Investigation() {
   const navigate = useNavigate();
   const g = useGame();
   const gameCase = g.getCase(id);
+  const unlocked = gameCase ? g.isUnlocked(gameCase.id) : false;
 
   useEffect(() => {
-    if (gameCase && (!g.progress || g.progress.caseId !== gameCase.id)) g.startCase(gameCase.id);
-  }, [gameCase, g]);
+    if (gameCase && !unlocked) { navigate("/cases", { replace: true }); return; }
+    if (gameCase && unlocked && (!g.progress || g.progress.caseId !== gameCase.id)) g.startCase(gameCase.id);
+  }, [gameCase, unlocked, g, navigate]);
 
   const intro = gameCase ? getDialogue(gameCase.intro_dialogue) : [];
   const dlg = useDialogue(intro, () => g.setPhase("evidence"));
 
-  if (!gameCase || !g.progress || g.progress.caseId !== gameCase.id) return null;
+  if (!gameCase || !unlocked || !g.progress || g.progress.caseId !== gameCase.id) return null;
   const p = g.progress;
   const evidence = getEvidence(gameCase.evidence_set);
   const scanned = scannedEvidence(gameCase, p);
