@@ -57,6 +57,7 @@ export default function Investigation() {
             const active = ph.id === g.phase;
             return (
               <button key={ph.id} disabled={blocked} onClick={() => g.setPhase(ph.id)}
+                aria-current={active ? "step" : undefined}
                 className={`border px-3.5 py-2.5 font-mono text-[9.5px] tracking-[.14em] ${active ? "border-gold bg-gold text-navy" : blocked ? "cursor-not-allowed border-haze/20 text-haze/40" : "border-haze/25 text-haze hover:border-cyan hover:text-cyan"}`}>
                 {ph.label}
               </button>

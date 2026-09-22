@@ -5,14 +5,30 @@ Catat setiap aset pihak ketiga di sini. Wajib untuk lisensi CC-BY.
 ## Font
 | ASET | SUMBER | LISENSI |
 |---|---|---|
-| Orbitron | Google Fonts | SIL Open Font License 1.1 |
-| Inter | Google Fonts | SIL Open Font License 1.1 |
-| JetBrains Mono | Google Fonts | SIL Open Font License 1.1 |
+| Orbitron | `@fontsource/orbitron` (npm) — subset latin, di-host sendiri | SIL Open Font License 1.1 |
+| Inter | `@fontsource/inter` (npm) — subset latin, di-host sendiri | SIL Open Font License 1.1 |
+| JetBrains Mono | `@fontsource/jetbrains-mono` (npm) — subset latin, di-host sendiri | SIL Open Font License 1.1 |
+
+> Catatan produksi: font dipindahkan dari Google Fonts CDN ke paket `@fontsource` yang di-bundle
+> bersama aplikasi, agar identitas visual tetap utuh saat perangkat offline (tanpa ini seluruh
+> tipografi jatuh ke font sistem begitu koneksi putus). Lisensi tidak berubah — tetap OFL 1.1.
 
 ## Ikon
 | ASET | SUMBER | LISENSI |
 |---|---|---|
 | Lucide React | lucide.dev | ISC License |
+| favicon.svg, icon-192.png, icon-512.png, icon-maskable-512.png | Digenerate — bentuk berlian ADIL (Python/Pillow), turunan dari `ui/logo_adil.png` | Dibuat dari nol, tidak ada pihak ketiga |
+
+## Logo institusional
+| FILE | ASET | PEMILIK | STATUS PEMAKAIAN |
+|---|---|---|---|
+| institutional/logo-kemendikdasmen.png | Logo Kementerian Pendidikan Dasar dan Menengah | Kemendikdasmen RI | Dipakai sebagai program resmi — identik dengan penerapan di NEXA & SIGAP |
+| institutional/logo-pendidikan-bermutu.png | Pendidikan Bermutu Untuk Semua | Kemendikdasmen RI | idem |
+| institutional/logo-ramah.png | Kemendikdasmen RAMAH | Kemendikdasmen RI | idem |
+| institutional/logo-sobat-smp.png | Sobat SMP | Kemendikdasmen RI | idem |
+
+> Lambang resmi negara/kementerian, bukan aset berlisensi terbuka. Pemakaian mengikuti
+> ketentuan branding program dan harus dilepas bila ADIL dipublikasikan di luar payung program.
 
 ## Musik
 | FILE | JUDUL | PEMBUAT | SUMBER | LISENSI |
