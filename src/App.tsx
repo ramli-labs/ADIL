@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import FeedbackToast from "./components/ui/FeedbackToast";
 import Hud from "./components/ui/Hud";
+import InstitutionalHeader from "./components/ui/InstitutionalHeader";
 import Academy from "./pages/Academy";
 import Archive from "./pages/Archive";
 import CaseSelection from "./pages/CaseSelection";
@@ -15,6 +16,7 @@ export default function App() {
   return (
     <div className="adil-bg relative flex min-h-screen flex-col font-body text-white">
       <div className="adil-grid pointer-events-none fixed inset-0 z-0 opacity-35" />
+      <InstitutionalHeader />
       <Hud />
       <main className="relative z-10 flex flex-1 flex-col">
         <Routes>
