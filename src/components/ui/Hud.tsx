@@ -1,9 +1,12 @@
-import { GraduationCap, Scale, Volume2, VolumeX } from "lucide-react";
+import { GraduationCap, Scale, Settings, Volume2, VolumeX } from "lucide-react";
+import { useState } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { useGame } from "../../engine/gameState";
+import SettingsModal from "./SettingsModal";
 
 export default function Hud() {
   const { justiceScore, audioOn, toggleAudio, getCase, config } = useGame();
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const { id } = useParams();
   const { pathname } = useLocation();
   const active = getCase(id);
@@ -33,6 +36,11 @@ export default function Hud() {
         {audioOn ? <Volume2 className="h-3.5 w-3.5" /> : <VolumeX className="h-3.5 w-3.5" />}
         {audioOn ? "AUDIO ON" : "AUDIO OFF"}
       </button>
+      <button onClick={() => setSettingsOpen(true)} aria-label="Pengaturan"
+        className="flex items-center gap-2 border border-haze/30 px-3 py-2 text-haze hover:border-cyan hover:text-cyan">
+        <Settings className="h-3.5 w-3.5" />
+      </button>
+      {settingsOpen && <SettingsModal onClose={() => setSettingsOpen(false)} />}
     </header>
   );
 }

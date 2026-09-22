@@ -88,7 +88,11 @@ export interface CaseRecord {
   correctPicks: number; pickTotal: number; scannedAll: boolean; completedAt: number;
 }
 
-export interface SaveData { playerName: string | null; cases: Record<string, CaseRecord>; badges: string[]; teacherMode: boolean }
+export interface GameSettings { sound: boolean; narration: boolean; reducedMotion: boolean }
+export interface SaveData {
+  playerName: string | null; cases: Record<string, CaseRecord>; badges: string[]; teacherMode: boolean;
+  settings: GameSettings;
+}
 
 export interface ChatMessage { who: "player" | "LUMA"; text: string; unlock?: string }
 export interface CaseProgress {

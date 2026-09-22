@@ -10,24 +10,33 @@ import { audioEngine } from "./audioEngine";
 import { analystProfile, evaluateBadges, finalEnding } from "./endingEngine";
 import { justiceScore, rankFor, scoreCase } from "./scoringEngine";
 
-const emptySave: SaveData = { playerName: null, cases: {}, badges: [], teacherMode: config.teacher_mode.default_visible };
+const emptySave: SaveData = {
+  playerName: null, cases: {}, badges: [], teacherMode: config.teacher_mode.default_visible,
+  settings: { sound: true, narration: true, reducedMotion: false }
+};
 
 function useGameStore() {
   const [save, setSave] = useState<SaveData>(emptySave);
   const [progress, setProgress] = useState<CaseProgress | null>(null);
   const [phase, setPhaseState] = useState<Phase>("brief");
-  const [audioOn, setAudioOn] = useState(true);
   const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [newBadges, setNewBadges] = useState<string[]>([]);
 
   useEffect(() => {
-    audioEngine.init();
     const problems = validateContent();
     if (problems.length) console.warn("[ADIL] masalah konten:\n" + problems.join("\n"));
+    let loaded = emptySave;
     try {
       const raw = localStorage.getItem(config.save.key);
-      if (raw) setSave({ ...emptySave, ...(JSON.parse(raw) as SaveData) });
+      if (raw) {
+        const parsed = JSON.parse(raw) as SaveData;
+        loaded = { ...emptySave, ...parsed, settings: { ...emptySave.settings, ...parsed.settings } };
+      }
     } catch { /* localStorage tidak tersedia */ }
+    setSave(loaded);
+    audioEngine.init();
+    audioEngine.setEnabled(loaded.settings.sound);
+    audioEngine.setNarrationEnabled(loaded.settings.narration);
   }, []);
 
   const persist = useCallback((next: SaveData) => {
@@ -110,16 +119,31 @@ function useGameStore() {
     return record;
   }, [persist, progress, save]);
 
-  const toggleAudio = useCallback(() => {
-    setAudioOn((on) => { audioEngine.setEnabled(!on); return !on; });
-  }, []);
+  const setSound = useCallback((on: boolean) => {
+    audioEngine.setEnabled(on);
+    persist({ ...save, settings: { ...save.settings, sound: on } });
+  }, [persist, save]);
+
+  const setNarration = useCallback((on: boolean) => {
+    audioEngine.setNarrationEnabled(on);
+    persist({ ...save, settings: { ...save.settings, narration: on } });
+  }, [persist, save]);
+
+  const setReducedMotion = useCallback((on: boolean) => {
+    persist({ ...save, settings: { ...save.settings, reducedMotion: on } });
+  }, [persist, save]);
+
+  const toggleAudio = useCallback(() => setSound(!save.settings.sound), [setSound, save.settings.sound]);
 
   const score = justiceScore(save.cases);
 
   return {
     cases, characters, config, academyIntro,
     save, progress, phase, setPhase, feedback, newBadges,
-    audioOn, toggleAudio,
+    audioOn: save.settings.sound, toggleAudio,
+    narrationOn: save.settings.narration, setNarration,
+    reducedMotion: save.settings.reducedMotion, setReducedMotion,
+    setSound,
     justiceScore: score, rank: rankFor(score),
     profile: analystProfile(save.cases),
     ending: finalEnding(save, cases.length, score),
@@ -128,7 +152,13 @@ function useGameStore() {
     canAnalyse, phaseLocked,
     setPlayerName: (playerName: string) => persist({ ...save, playerName }),
     setTeacherMode: (teacherMode: boolean) => persist({ ...save, teacherMode }),
-    resetSave: () => { persist(emptySave); setProgress(null); },
+    resetSave: () => {
+      persist(emptySave);
+      setProgress(null);
+      setNewBadges([]);
+      audioEngine.setEnabled(emptySave.settings.sound);
+      audioEngine.setNarrationEnabled(emptySave.settings.narration);
+    },
     isUnlocked: (id: string) => {
       const i = cases.findIndex((c) => c.id === id);
       return i <= 0 || Boolean(save.cases[cases[i - 1].id]);

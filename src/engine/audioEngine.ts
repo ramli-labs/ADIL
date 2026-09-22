@@ -2,7 +2,7 @@
  * audioEngine — BGM, SFX, dan suara karakter. Voice-ready:
  * bila file audio belum ada, game berjalan normal dengan subtitle saja (tanpa error).
  */
-import { Howl, Howler } from "howler";
+import { Howl } from "howler";
 import { config, characters } from "./content";
 
 const SFX: Record<string, string> = {
@@ -26,6 +26,7 @@ class AudioEngine {
   private sfx = new Map<string, Howl>();
   private unlocked = false;
   enabled = true;
+  narrationEnabled = true;
 
   init() {
     Object.entries(SFX).forEach(([k, src]) => {
@@ -59,7 +60,7 @@ class AudioEngine {
   /** Satu suara karakter sekaligus (config.audio.prevent_overlapping_voice). */
   speak(character: string, key: string) {
     if (config.audio.prevent_overlapping_voice) this.stopVoice();
-    if (!this.enabled) return;
+    if (!this.narrationEnabled) return;
     const slug = characters[character]?.slug;
     if (!slug) return;
     const howl = new Howl({
@@ -75,9 +76,15 @@ class AudioEngine {
 
   setEnabled(on: boolean) {
     this.enabled = on;
-    Howler.mute(!on);
+    this.sfx.forEach((h) => h.mute(!on));
+    this.beds.forEach((h) => h.mute(!on));
     const bed = this.currentBed ? this.beds.get(this.currentBed) : null;
     if (on) bed?.play(); else bed?.pause();
+  }
+
+  setNarrationEnabled(on: boolean) {
+    this.narrationEnabled = on;
+    if (!on) this.stopVoice();
   }
 }
 
