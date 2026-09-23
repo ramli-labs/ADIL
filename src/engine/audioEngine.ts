@@ -6,17 +6,17 @@ import { Howl } from "howler";
 import { config, characters } from "./content";
 
 const SFX: Record<string, string> = {
-  click: "/assets/audio/effects/ui_click.mp3",
-  scan: "/assets/audio/effects/evidence_scan.mp3",
-  unlock: "/assets/audio/effects/insight_unlock.mp3",
-  verdict: "/assets/audio/effects/verdict_gavel.mp3",
-  badge: "/assets/audio/effects/badge_unlock.mp3"
+  click: "assets/audio/effects/ui_click.mp3",
+  scan: "assets/audio/effects/evidence_scan.mp3",
+  unlock: "assets/audio/effects/insight_unlock.mp3",
+  verdict: "assets/audio/effects/verdict_gavel.mp3",
+  badge: "assets/audio/effects/badge_unlock.mp3"
 };
 
 const AMBIENCE: Record<string, string> = {
-  menu: "/assets/audio/background/adil_theme.mp3",
-  investigation: "/assets/audio/background/investigation.mp3",
-  verdict: "/assets/audio/background/verdict.mp3"
+  menu: "assets/audio/background/adil_theme.mp3",
+  investigation: "assets/audio/background/investigation.mp3",
+  verdict: "assets/audio/background/verdict.mp3"
 };
 
 class AudioEngine {
@@ -30,10 +30,10 @@ class AudioEngine {
 
   init() {
     Object.entries(SFX).forEach(([k, src]) => {
-      this.sfx.set(k, new Howl({ src: [src], volume: config.audio.sfx_volume, onloaderror: () => this.sfx.delete(k) }));
+      this.sfx.set(k, new Howl({ src: [src], html5: true, volume: config.audio.sfx_volume, onloaderror: () => this.sfx.delete(k) }));
     });
     Object.entries(AMBIENCE).forEach(([k, src]) => {
-      this.beds.set(k, new Howl({ src: [src], loop: true, volume: config.audio.music_volume, onloaderror: () => this.beds.delete(k) }));
+      this.beds.set(k, new Howl({ src: [src], loop: true, html5: true, volume: config.audio.music_volume, onloaderror: () => this.beds.delete(k) }));
     });
   }
 
@@ -64,7 +64,8 @@ class AudioEngine {
     const slug = characters[character]?.slug;
     if (!slug) return;
     const howl = new Howl({
-      src: [`/assets/audio/characters/${slug}/${key}.mp3`],
+      src: [`assets/audio/characters/${slug}/${key}.mp3`],
+      html5: true,
       volume: config.audio.voice_volume,
       onloaderror: () => { if (this.voice === howl) this.voice = null; }
     });

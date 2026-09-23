@@ -18,8 +18,10 @@ test.describe("ketahanan data", () => {
     const awal = (await bacaSave(page)).cases.case001.total;
     expect(awal).toBeGreaterThan(80);
 
-    // Ulangi dengan buruk: tanpa interogasi, bukti kunci salah semua, putusan lemah.
-    await page.goto("/case/case001");
+    // Ulangi lewat jalur pemain sungguhan, bukan lewat URL: tombol ini yang
+    // benar-benar me-reset progres sidang.
+    await page.getByRole("button", { name: "ULANG SIDANG INI" }).click();
+    await page.waitForURL("**/case/case001");
     await pindaiSemuaBukti(page);
     await kunciAnalisis(page, ["RAPOR ANDI", "LOG KEHADIRAN", "JADWAL SERVER"]);
     await page.getByRole("button", { name: "LANJUT KE RUANG PUTUSAN ▸" }).click();
@@ -38,7 +40,8 @@ test.describe("ketahanan data", () => {
     expect(new Set(pertama).size).toBe(pertama.length);
 
     // Mainkan ulang: syarat lencana yang sama terpenuhi lagi.
-    await page.goto("/case/case001");
+    await page.getByRole("button", { name: "ULANG SIDANG INI" }).click();
+    await page.waitForURL("**/case/case001");
     await pindaiSemuaBukti(page);
     await tanyaSemuaPertanyaan(page);
     await kunciAnalisis(page, SIDANG_1.buktiKunci);

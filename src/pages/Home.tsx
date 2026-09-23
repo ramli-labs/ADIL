@@ -34,7 +34,7 @@ export default function Home() {
       <motion.div initial={{ opacity: 0, y: 24, filter: "blur(6px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.9 }} className="border border-cyan/20 bg-gradient-to-br from-cyan/[.08] to-navy/50 p-5">
         <div className="relative aspect-[4/3] overflow-hidden border border-cyan/20 bg-[#071427]">
-          <img src="/assets/environments/home_courtroom.png" alt="" className="h-full w-full object-cover"
+          <img src="assets/environments/home_courtroom.png" alt="" className="h-full w-full object-cover"
             onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = "hidden"; }} />
           <div className="absolute inset-0 bg-[repeating-linear-gradient(135deg,rgba(0,217,255,.13)_0_2px,transparent_2px_11px)]" />
           <div className="pointer-events-none absolute inset-x-0 top-0 h-24 animate-scanline bg-gradient-to-b from-transparent via-cyan/15 to-transparent" />

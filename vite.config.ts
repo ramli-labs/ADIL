@@ -3,6 +3,9 @@ import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  // Relatif, bukan "/": karya lomba dibuka langsung dari hasil ekstrak ZIP,
+  // sehingga path absolut membuat seluruh aset gagal dimuat.
+  base: "./",
   plugins: [
     react(),
     VitePWA({

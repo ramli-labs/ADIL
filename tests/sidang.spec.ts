@@ -33,7 +33,7 @@ test.describe("alur sidang", () => {
    * kesulitan bisa dilompati cukup dengan mengetik alamat.
    */
   test("kasus terkunci tidak bisa dibuka lewat URL langsung", async ({ page }) => {
-    await page.goto("/case/case003");
+    await page.goto("/#/case/case003");
     await page.waitForURL("**/cases");
     await expect(page.getByText("SELESAIKAN SIDANG SEBELUMNYA").first()).toBeVisible();
   });
@@ -43,14 +43,14 @@ test.describe("alur sidang", () => {
    * kasus yang sudah sah terbuka pun ditolak saat URL-nya dibuka langsung.
    */
   test("menyelesaikan kasus pertama membuka kasus kedua", async ({ page }) => {
-    await page.goto("/cases");
+    await page.goto("/#/cases");
     await expect(page.getByText("ADIL-002")).toBeVisible();
     await expect(page.getByText("SELESAIKAN SIDANG SEBELUMNYA").first()).toBeVisible();
 
     await masukSidangPertama(page);
     await mainkanSidang(page, SIDANG_1);
 
-    await page.goto("/case/case002");
+    await page.goto("/#/case/case002");
     await expect(page).toHaveURL(/\/case\/case002$/);
     await expect(page.getByText("SISWA YANG TAK TERLIHAT")).toBeVisible();
   });
@@ -60,7 +60,7 @@ test.describe("alur sidang", () => {
     await masukSidangPertama(page);
     await mainkanSidang(page, SIDANG_1);
 
-    await page.goto("/profile");
+    await page.goto("/#/profile");
     await expect(page.getByText("1/4")).toBeVisible();
     await page.reload();
     await expect(page.getByText("1/4")).toBeVisible();

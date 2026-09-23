@@ -24,7 +24,7 @@ export default function Character({
       transition={{ duration: 0.5 }}
       className={`border border-cyan/20 bg-gradient-to-b from-cyan/[.08] to-transparent p-3 ${className}`}>
       <div className="relative aspect-[3/4] overflow-hidden bg-navy-panel">
-        <img src={`/assets/characters/${slug}/${state}.png`} alt={`${name} — ${state}`}
+        <img src={`assets/characters/${slug}/${state}.png`} alt={`${name} — ${state}`}
           className="h-full w-full object-cover object-top"
           onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = "hidden"; }} />
         <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(115deg,rgba(255,255,255,.07)_0_2px,transparent_2px_10px)]" />

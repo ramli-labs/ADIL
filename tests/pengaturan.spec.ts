@@ -74,7 +74,7 @@ test.describe("pengaturan", () => {
     await page.getByRole("button", { name: "RESET SELURUH PROGRES" }).click();
     await page.getByRole("button", { name: "YA, HAPUS SEMUA" }).click();
 
-    await expect(page).toHaveURL("/");
+    await expect(page).toHaveURL(/#\/$/);
     expect(await bacaSettings(page)).toEqual({ sound: true, narration: true, reducedMotion: false });
   });
 });

@@ -14,7 +14,7 @@ test.describe("tiap kasus bisa dituntaskan", () => {
   for (const [indeks, kasus] of KASUS.entries()) {
     test(`${kasus.kode} — putusan terbaik memberi skor etika penuh`, async ({ page }) => {
       await bukaKunciSampai(page, indeks);
-      await page.goto(`/case/${kasus.id}`);
+      await page.goto(`/#/case/${kasus.id}`);
       await expect(page).toHaveURL(new RegExp(`/case/${kasus.id}$`));
 
       await mainkanSidang(page, kasus);
