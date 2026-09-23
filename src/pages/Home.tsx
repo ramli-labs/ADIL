@@ -14,16 +14,16 @@ export default function Home() {
       <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
         <div className="mb-6 inline-flex items-center gap-2.5 border border-cyan/30 px-3.5 py-1.5">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan" />
-          <span className="font-mono text-[9.5px] tracking-[.22em] text-cyan">SESI TAHUN {config.game.year_setting} · AKSES ANALIS TERVERIFIKASI</span>
+          <span className="font-mono text-[12px] tracking-[.22em] text-cyan">SESI TAHUN {config.game.year_setting} · AKSES ANALIS TERVERIFIKASI</span>
         </div>
         <h1 className="m-0 font-display text-[clamp(42px,7vw,92px)] font-black leading-[.95]">THE AI<br /><span className="text-gold">TRIAL</span></h1>
-        <p className="mb-6 mt-1.5 font-mono text-[11px] tracking-[.24em] text-cyan">SIDANG KEADILAN ALGORITMA · ADIL ACADEMY</p>
+        <p className="mb-6 mt-1.5 font-mono text-[12px] tracking-[.24em] text-cyan">SIDANG KEADILAN ALGORITMA · ADIL ACADEMY</p>
         <p className="max-w-[54ch] text-pretty text-[17px] leading-relaxed text-[#d7e2ee]">
           AI dapat mengambil keputusan dalam sekejap. Tetapi keputusan yang cepat tidak selalu adil.
           Masuki ADIL Academy sebagai <strong className="text-white">{config.game.player_role}</strong>: kumpulkan bukti,
           interogasi sistem, lalu jatuhkan putusan etismu.
         </p>
-        <p className="mb-8 mt-2.5 font-mono text-[11px] text-haze">{cases.length} SIDANG · BUKTI INTERAKTIF · INTEROGASI AI · PUTUSAN ETIS</p>
+        <p className="mb-8 mt-2.5 font-mono text-[12px] text-haze">{cases.length} SIDANG · BUKTI INTERAKTIF · INTEROGASI AI · PUTUSAN ETIS</p>
         <div className="flex flex-wrap gap-3.5">
           <Button onClick={() => navigate("/academy")}>MULAI SIDANG</Button>
           <Button variant="ghost" onClick={() => navigate("/archive")}>ARSIP BUKTI</Button>
@@ -43,12 +43,12 @@ export default function Home() {
           {[{ k: "ANALIS", v: playerName, c: "text-white" }, { k: "PANGKAT", v: rank.label, c: "text-gold" },
             { k: "SIDANG", v: `${Object.keys(save.cases).length}/${cases.length}`, c: "text-cyan" }].map((x) => (
             <div key={x.k} className="border border-haze/20 p-3">
-              <div className="font-mono text-[8.5px] tracking-[.16em] text-haze">{x.k}</div>
+              <div className="font-mono text-[12px] tracking-[.16em] text-haze">{x.k}</div>
               <div className={`mt-1.5 font-display text-[12px] ${x.c}`}>{x.v}</div>
             </div>
           ))}
         </div>
-        <div className="mt-2.5 border border-haze/20 p-3 font-mono text-[9px] tracking-[.16em] text-haze">
+        <div className="mt-2.5 border border-haze/20 p-3 font-mono text-[12px] tracking-[.16em] text-haze">
           JUSTICE SCORE TERSIMPAN: <span className="text-white">{justiceScore}</span>/100
         </div>
       </motion.div>

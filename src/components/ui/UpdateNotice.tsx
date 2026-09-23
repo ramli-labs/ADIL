@@ -27,7 +27,7 @@ export default function UpdateNotice() {
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 12 }}
           className="fixed bottom-6 right-6 z-[70] flex max-w-[calc(100vw-3rem)] flex-wrap items-center gap-4 border border-cyan/50 bg-navy-deep px-5 py-4 shadow-[0_8px_30px_rgba(0,0,0,.5)]"
         >
-          <span className="font-mono text-[11px] leading-relaxed tracking-[.06em] text-white">
+          <span className="font-mono text-[12px] leading-relaxed tracking-[.06em] text-white">
             Versi baru ADIL tersedia.
             <span className="mt-0.5 block text-haze">Progresmu tetap tersimpan.</span>
           </span>
@@ -40,7 +40,7 @@ export default function UpdateNotice() {
               );
               updateServiceWorker(false);
             }}
-            className="border border-cyan bg-cyan/15 px-4 py-2.5 font-mono text-[10px] tracking-[.16em] text-cyan hover:bg-cyan/25"
+            className="border border-cyan bg-cyan/15 px-4 py-2.5 font-mono text-[12px] tracking-[.16em] text-cyan hover:bg-cyan/25"
           >
             MUAT ULANG
           </button>

@@ -19,7 +19,7 @@ export default function FeedbackToast() {
       <AnimatePresence>
         {feedback && (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 12 }}
-            className={`fixed bottom-6 left-1/2 z-50 -translate-x-1/2 border px-5 py-3 font-mono text-[11px] tracking-[.08em] backdrop-blur ${tone[feedback.tone]}`}>
+            className={`fixed bottom-6 left-1/2 z-50 -translate-x-1/2 border px-5 py-3 font-mono text-[12px] tracking-[.08em] backdrop-blur ${tone[feedback.tone]}`}>
             {feedback.text}
           </motion.div>
         )}

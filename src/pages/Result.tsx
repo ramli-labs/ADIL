@@ -36,12 +36,12 @@ export default function Result() {
       className="flex flex-col gap-6 px-7 py-10 md:px-14">
       <div className="grid items-start gap-6 lg:grid-cols-2">
         <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
-          <div className="font-mono text-[10px] tracking-[.22em] text-cyan">PUTUSAN TERCATAT · {gameCase.case_code}</div>
+          <div className="font-mono text-[12px] tracking-[.22em] text-cyan">PUTUSAN TERCATAT · {gameCase.case_code}</div>
           <h2 className="mb-1 mt-3 font-display text-[clamp(30px,5vw,52px)] font-black tracking-[.03em]">{tierLabel(record.tier)}</h2>
           <div className="mb-5 font-display text-[15px] tracking-[.1em] text-gold">{gameCase.title}</div>
           <div className="mb-5 flex items-baseline gap-3.5 border-y border-gold/30 py-[18px]">
             <span className="font-display text-[60px] font-black leading-none text-gold">{record.total}</span>
-            <span className="font-mono text-[10px] leading-relaxed tracking-[.18em] text-haze">JUSTICE SCORE<br />SIDANG INI (MAKS 100)</span>
+            <span className="font-mono text-[12px] leading-relaxed tracking-[.18em] text-haze">JUSTICE SCORE<br />SIDANG INI (MAKS 100)</span>
           </div>
           <ScoreBoard record={record} config={g.config} />
         </motion.div>
@@ -49,12 +49,12 @@ export default function Result() {
         <div className="flex flex-col gap-4">
           {option && (
             <div className="border border-cyan/25 bg-cyan/[.06] p-5">
-              <div className="font-mono text-[9px] tracking-[.2em] text-cyan">EVALUASI PUTUSANMU</div>
+              <div className="font-mono text-[12px] tracking-[.2em] text-cyan">EVALUASI PUTUSANMU</div>
               <p className="mb-0 mt-2.5 text-[15px] leading-relaxed text-white">{option.feedback}</p>
             </div>
           )}
           <div className="border border-gold/30 bg-gold/[.06] p-5">
-            <div className="font-mono text-[9px] tracking-[.2em] text-gold">PELAJARAN KASUS · {learning.principle}</div>
+            <div className="font-mono text-[12px] tracking-[.2em] text-gold">PELAJARAN KASUS · {learning.principle}</div>
             <p className="mb-0 mt-2.5 text-[15px] leading-relaxed text-white">{learning.takeaway}</p>
           </div>
           {closing && (
@@ -68,7 +68,7 @@ export default function Result() {
           {g.newBadges.length > 0 && (
             <motion.div initial={{ opacity: 0, scale: 0.94, filter: "blur(6px)" }} animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
               transition={{ duration: 0.7 }} className="border border-gold bg-gradient-to-br from-gold/20 to-transparent p-5">
-              <div className="font-mono text-[9px] tracking-[.22em] text-gold">LENCANA TERBUKA</div>
+              <div className="font-mono text-[12px] tracking-[.22em] text-gold">LENCANA TERBUKA</div>
               {g.newBadges.map((bid) => {
                 const b = badgeById(bid);
                 return b ? (
@@ -82,7 +82,7 @@ export default function Result() {
           )}
           {g.ending && (
             <div className="border border-nara/40 bg-nara/[.08] p-5">
-              <div className="font-mono text-[9px] tracking-[.22em] text-nara">SELURUH SIDANG SELESAI</div>
+              <div className="font-mono text-[12px] tracking-[.22em] text-nara">SELURUH SIDANG SELESAI</div>
               <div className="mb-1.5 mt-2.5 font-display text-[18px] font-black tracking-[.05em]">{g.ending.title}</div>
               <p className="mb-0 text-[14px] leading-relaxed text-[#e3ebf3]">{g.ending.text}</p>
             </div>
@@ -92,7 +92,7 @@ export default function Result() {
       </div>
 
       <div className="flex flex-wrap items-center gap-3 border-y border-haze/15 py-4">
-        <label className="flex cursor-pointer items-center gap-2.5 font-mono text-[10px] tracking-[.16em] text-haze">
+        <label className="flex cursor-pointer items-center gap-2.5 font-mono text-[12px] tracking-[.16em] text-haze">
           <input type="checkbox" checked={g.save.teacherMode} onChange={(e) => g.setTeacherMode(e.currentTarget.checked)}
             className="h-3.5 w-3.5 accent-[#C7A6FF]" />
           MODE GURU — tampilkan ringkasan diskusi

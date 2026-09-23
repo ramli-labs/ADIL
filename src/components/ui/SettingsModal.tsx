@@ -12,7 +12,7 @@ function ToggleRow({ label, help, checked, onChange }: { label: string; help: st
     <label className="flex cursor-pointer items-center justify-between gap-4 border border-haze/15 bg-white/[.02] px-4 py-3.5">
       <span>
         <span className="block font-display text-[12.5px] font-bold tracking-[.05em] text-white">{label}</span>
-        <span className="mt-1 block font-mono text-[10px] leading-relaxed text-haze">{help}</span>
+        <span className="mt-1 block font-mono text-[12px] leading-relaxed text-haze">{help}</span>
       </span>
       <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)}
         className="h-5 w-5 flex-none accent-cyan" />
@@ -71,7 +71,7 @@ export default function SettingsModal({ onClose }: { onClose: () => void }) {
         <div className="mt-6 border-t border-haze/15 pt-5">
           {!confirmReset ? (
             <button onClick={() => setConfirmReset(true)}
-              className="w-full border border-[#e07a7a]/40 px-4 py-3 font-mono text-[10.5px] tracking-[.14em] text-[#e07a7a] hover:bg-[#e07a7a]/10">
+              className="w-full border border-[#e07a7a]/40 px-4 py-3 font-mono text-[12px] tracking-[.14em] text-[#e07a7a] hover:bg-[#e07a7a]/10">
               RESET SELURUH PROGRES
             </button>
           ) : (
@@ -81,12 +81,12 @@ export default function SettingsModal({ onClose }: { onClose: () => void }) {
               </p>
               <div className="mt-3.5 flex gap-2.5">
                 <button onClick={() => setConfirmReset(false)}
-                  className="flex-1 border border-haze/30 px-3 py-2.5 font-mono text-[10px] tracking-[.14em] text-haze hover:text-white">
+                  className="flex-1 border border-haze/30 px-3 py-2.5 font-mono text-[12px] tracking-[.14em] text-haze hover:text-white">
                   BATAL
                 </button>
                 <button
                   onClick={() => { resetSave(); setConfirmReset(false); onClose(); navigate("/"); }}
-                  className="flex-1 border border-[#e07a7a] bg-[#e07a7a]/15 px-3 py-2.5 font-mono text-[10px] tracking-[.14em] text-[#e07a7a] hover:bg-[#e07a7a]/25">
+                  className="flex-1 border border-[#e07a7a] bg-[#e07a7a]/15 px-3 py-2.5 font-mono text-[12px] tracking-[.14em] text-[#e07a7a] hover:bg-[#e07a7a]/25">
                   YA, HAPUS SEMUA
                 </button>
               </div>

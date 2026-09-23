@@ -9,8 +9,8 @@ export default function EvidenceBoard({
   return (
     <div>
       <div className="mb-4 flex flex-wrap items-center justify-between gap-2.5">
-        <div className="font-mono text-[10px] tracking-[.18em] text-cyan">PAPAN BUKTI · KLIK BERKAS UNTUK MEMINDAI</div>
-        <div className="font-mono text-[10px] text-haze">{done.length} / {evidence.length} BERKAS DIPINDAI · {relevantFound} RELEVAN</div>
+        <div className="font-mono text-[12px] tracking-[.18em] text-cyan">PAPAN BUKTI · KLIK BERKAS UNTUK MEMINDAI</div>
+        <div className="font-mono text-[12px] text-haze">{done.length} / {evidence.length} BERKAS DIPINDAI · {relevantFound} RELEVAN</div>
       </div>
       <div className="grid gap-3.5 sm:grid-cols-2 xl:grid-cols-3">
         {evidence.map((e) => (

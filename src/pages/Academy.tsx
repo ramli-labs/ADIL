@@ -14,7 +14,7 @@ export default function Academy() {
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
       className="flex flex-1 flex-col gap-6 px-7 py-10 md:px-14">
-      <div className="font-mono text-[10px] tracking-[.22em] text-cyan">ADIL ACADEMY · ORIENTASI ANALIS</div>
+      <div className="font-mono text-[12px] tracking-[.22em] text-cyan">ADIL ACADEMY · ORIENTASI ANALIS</div>
       <div className="grid flex-1 items-end gap-7 md:grid-cols-[300px_1fr]">
         <Character name={dlg.line.character} state={dlg.line.state} />
         <DialogueBox line={dlg.line} index={dlg.index} total={dlg.total} isLast={dlg.isLast}

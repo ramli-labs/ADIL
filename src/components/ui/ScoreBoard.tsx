@@ -10,7 +10,7 @@ export default function ScoreBoard({ record, config }: { record: CaseRecord; con
     <div className="flex flex-col gap-3">
       {bars.map((b) => (
         <div key={b.label}>
-          <div className="mb-1.5 flex justify-between font-mono text-[10px] tracking-[.14em] text-haze">
+          <div className="mb-1.5 flex justify-between font-mono text-[12px] tracking-[.14em] text-haze">
             <span>{b.label}</span>
             <span className="text-white">{b.value}/{b.max}</span>
           </div>

@@ -8,7 +8,7 @@ export default function Badge({ badge, owned }: { badge: BadgeDef; owned: boolea
       <div className="mb-4 h-6 w-6 rotate-45 border-[1.5px] border-current" />
       <div className="font-display text-[13px] font-bold tracking-[.06em]">{badge.label}</div>
       <p className="mt-2 text-[12.5px] leading-relaxed opacity-85">{badge.desc}</p>
-      <div className="mt-3 font-mono text-[9px] tracking-[.16em]">{owned ? "TERBUKA" : "TERKUNCI"}</div>
+      <div className="mt-3 font-mono text-[12px] tracking-[.16em]">{owned ? "TERBUKA" : "TERKUNCI"}</div>
     </motion.div>
   );
 }

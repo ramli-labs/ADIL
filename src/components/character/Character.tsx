@@ -32,9 +32,9 @@ export default function Character({
       </div>
       <div className="mt-2.5 flex items-center justify-between gap-2">
         <span className="font-display text-[14px] font-bold tracking-[.1em]" style={{ color: info?.accent }}>{name}</span>
-        <span className="border border-cyan/35 px-2 py-1 font-mono text-[8.5px] tracking-[.14em] text-cyan">{String(state).toUpperCase()}</span>
+        <span className="border border-cyan/35 px-2 py-1 font-mono text-[12px] tracking-[.14em] text-cyan">{String(state).toUpperCase()}</span>
       </div>
-      {info && !compact && <div className="mt-1.5 font-mono text-[9.5px] text-haze">{info.expressions[String(state)] ?? info.role}</div>}
+      {info && !compact && <div className="mt-1.5 font-mono text-[12px] text-haze">{info.expressions[String(state)] ?? info.role}</div>}
     </motion.div>
   );
 }

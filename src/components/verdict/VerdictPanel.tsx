@@ -7,9 +7,9 @@ export default function VerdictPanel({
   return (
     <div>
       <div className="border border-gold/40 bg-gradient-to-br from-gold/10 to-navy/70 p-6 md:p-8">
-        <div className="font-mono text-[9px] tracking-[.22em] text-gold">RUANG PUTUSAN</div>
+        <div className="font-mono text-[12px] tracking-[.22em] text-gold">RUANG PUTUSAN</div>
         <h3 className="mt-3 font-display text-[17px] font-bold leading-snug text-white md:text-[24px]">{question}</h3>
-        <p className="mt-2.5 font-mono text-[10px] text-haze">Putusanmu menentukan skor etika. Tidak ada tombol undo.</p>
+        <p className="mt-2.5 font-mono text-[12px] text-haze">Putusanmu menentukan skor etika. Tidak ada tombol undo.</p>
       </div>
       <div className="mt-3.5 flex flex-col gap-3">
         {options.map((o, i) => (
