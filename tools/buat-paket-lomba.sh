@@ -23,6 +23,9 @@ cp docs/panduan-penggunaan/ADIL-Panduan-Penggunaan.pdf "$KELUARAN/$NAMA/"
 echo "▸ Menyertakan pencatatan lisensi aset…"
 cp docs/asset-attribution.md "$KELUARAN/$NAMA/lisensi-aset.md"
 
+echo "▸ Menyertakan pemetaan CP/TP…"
+cp docs/pemetaan-cp-tp.md "$KELUARAN/$NAMA/pemetaan-cp-tp.md"
+
 # Video demonstrasi wajib, tetapi harus direkam sendiri oleh peserta.
 if [ -f "$AKAR/video-demonstrasi.mp4" ]; then
   echo "▸ Menyertakan video demonstrasi…"

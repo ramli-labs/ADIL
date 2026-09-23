@@ -3,10 +3,9 @@
 Dokumen ini memetakan setiap bagian gim ADIL ke Capaian Pembelajaran (CP) dan Tujuan
 Pembelajaran (TP) mata pelajaran **Informatika Fase D (Kelas VII–IX)**.
 
-> **PERLU DILENGKAPI SEBELUM DIKIRIM.** Kolom *Rumusan CP* sengaja dikosongkan.
-> Rumusan CP adalah kutipan resmi dari keputusan kepala BSKAP yang berlaku, dan harus disalin
-> persis dari dokumen aslinya — bukan diparafrasekan. Salin rumusan untuk elemen yang tertera,
-> lalu hapus catatan ini.
+> Rumusan CP di bawah dikutip persis dari dokumen *Alur dan Tujuan Pembelajaran Informatika Fase D*
+> pada platform perangkat ajar resmi Kemendikbud (`static.perangkat-ajar.belajar.id/SMP.D.INF.IPS.1.pdf`).
+> Bila sekolah memakai edisi kurikulum yang lebih baru, cocokkan ulang dengan dokumen yang berlaku.
 
 ## A. Identitas
 
@@ -20,10 +19,25 @@ Pembelajaran (TP) mata pelajaran **Informatika Fase D (Kelas VII–IX)**.
 
 ## B. Rumusan CP yang dirujuk
 
-| Kode | Elemen | Rumusan CP (salin dari dokumen resmi) |
+| Kode | Elemen | Rumusan CP |
 |---|---|---|
-| DSI | Dampak Sosial Informatika | _(isi)_ |
-| BK | Berpikir Komputasional | _(isi)_ |
+| BK | Berpikir Komputasional | "Pada akhir fase D, peserta didik mampu menerapkan berpikir komputasional untuk menghasilkan beberapa solusi dalam menyelesaikan persoalan dengan data diskrit bervolume kecil dan mendisposisikan berpikir komputasional dalam bidang lain terutama dalam literasi, numerasi, dan literasi sains (*computationally literate*)." |
+| DSI | Dampak Sosial Informatika | "Pada akhir fase D, peserta didik mampu memahami ketersediaan data dan informasi lewat aplikasi media sosial, memahami keterbukaan informasi, memilih informasi yang bersifat publik atau privat, menerapkan etika dan menjaga keamanan dirinya dalam masyarakat digital." |
+
+### Catatan kesesuaian
+
+**BK — kesesuaian kuat.** Inti permainan adalah menyelesaikan persoalan dari **data diskrit bervolume
+kecil**: enam berkas bukti per sidang yang harus dipilah, dirangkai menjadi rantai sebab-akibat, lalu
+dijadikan dasar putusan. Frasa "menghasilkan beberapa solusi" tercermin pada empat opsi putusan yang
+masing-masing membawa konsekuensi berbeda.
+
+**DSI — kesesuaian sebagian, perlu dibingkai.** Rumusan DSI menekankan *aplikasi media sosial*,
+sedangkan ADIL mengangkat keputusan otomatis di lingkungan sekolah. Yang bertemu langsung adalah
+frasa **"menerapkan etika ... dalam masyarakat digital"** serta **"memahami ketersediaan data dan
+informasi"** — justru inti ADIL-001, yaitu keputusan yang cacat karena data yang menentukan tidak
+pernah tersedia bagi sistem. Unsur publik/privat muncul pada ADIL-003 melalui data pola belajar daring
+siswa. Bila juri menuntut kesesuaian harfiah dengan "media sosial", bagian ini dapat dijelaskan sebagai
+perluasan konteks masyarakat digital, bukan penggantian rumusan.
 
 ## C. Pemetaan per Sidang
 
