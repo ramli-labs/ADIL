@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/ui/Button";
+import { learning } from "../engine/content";
 import { useGame } from "../engine/gameState";
 
 export default function Home() {
@@ -23,9 +24,21 @@ export default function Home() {
           Masuki ADIL Academy sebagai <strong className="text-white">{config.game.player_role}</strong>: kumpulkan bukti,
           interogasi sistem, lalu jatuhkan putusan etismu.
         </p>
-        <p className="mb-8 mt-2.5 font-mono text-[12px] text-haze">{cases.length} SIDANG · BUKTI INTERAKTIF · INTEROGASI AI · PUTUSAN ETIS</p>
+        <p className="mb-5 mt-2.5 font-mono text-[12px] text-haze">{cases.length} SIDANG · BUKTI INTERAKTIF · INTEROGASI AI · PUTUSAN ETIS</p>
+
+        {/* Laman Muka wajib menyatakan tujuan pembelajaran; sumbernya learning.json
+            supaya tidak pernah berbeda dari materi yang benar-benar diajarkan. */}
+        <div className="mb-8 max-w-[58ch] border-l-2 border-gold bg-gold/[.06] px-4 py-3.5">
+          <div className="font-mono text-[12px] tracking-[.18em] text-gold">TUJUAN PEMBELAJARAN</div>
+          <p className="mt-2 text-[14px] leading-relaxed text-[#e3ebf3]">{learning.meta.competency}</p>
+          <p className="mt-2 font-mono text-[12px] leading-relaxed text-haze">
+            {learning.meta.curriculum} · {learning.meta.grade}
+          </p>
+        </div>
+
         <div className="flex flex-wrap gap-3.5">
           <Button onClick={() => navigate("/academy")}>MULAI SIDANG</Button>
+          <Button variant="ghost" onClick={() => navigate("/panduan")}>CARA BERMAIN</Button>
           <Button variant="ghost" onClick={() => navigate("/archive")}>ARSIP BUKTI</Button>
           <Button variant="ghost" onClick={() => navigate("/profile")}>PROFIL ANALIS</Button>
         </div>

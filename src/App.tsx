@@ -9,6 +9,7 @@ import Academy from "./pages/Academy";
 import Archive from "./pages/Archive";
 import CaseSelection from "./pages/CaseSelection";
 import Home from "./pages/Home";
+import Panduan from "./pages/Panduan";
 import Investigation from "./pages/Investigation";
 import Profile from "./pages/Profile";
 import Result from "./pages/Result";
@@ -27,6 +28,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/academy" element={<Academy />} />
+            <Route path="/panduan" element={<Panduan />} />
             <Route path="/cases" element={<CaseSelection />} />
             <Route path="/case/:id" element={<Investigation />} />
             <Route path="/case/:id/verdict" element={<Verdict />} />

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>ADIL — Panduan Penggunaan</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Times New Roman", serif; font-size: 11.5pt; line-height: 1.5; color: #111; margin: 0; }
+  h1 { font-size: 20pt; margin: 0 0 2mm; letter-spacing: .5px; }
+  h2 { font-size: 13pt; margin: 8mm 0 2mm; border-bottom: 1.5pt solid #16407a; padding-bottom: 1.5mm; color: #16407a; }
+  h3 { font-size: 11.5pt; margin: 5mm 0 1.5mm; }
+  p { margin: 0 0 2.5mm; text-align: justify; }
+  table { width: 100%; border-collapse: collapse; margin: 2mm 0 3mm; font-size: 10.5pt; }
+  th, td { border: .5pt solid #888; padding: 2mm 2.5mm; vertical-align: top; text-align: left; }
+  th { background: #e8eef7; font-weight: bold; }
+  ol, ul { margin: 0 0 3mm; padding-left: 6mm; }
+  li { margin-bottom: 1.5mm; }
+  .sampul { text-align: center; padding-top: 18mm; }
+  .sampul .judul { font-size: 30pt; font-weight: bold; letter-spacing: 3px; color: #16407a; }
+  .sampul .anak { font-size: 15pt; letter-spacing: 1px; margin-top: 1mm; }
+  .sampul .jenis { margin-top: 10mm; font-size: 12pt; }
+  .kotak { border: .5pt solid #888; background: #f4f7fb; padding: 3mm 4mm; margin: 3mm 0; }
+  .kecil { font-size: 10pt; color: #444; }
+  .pb { page-break-before: always; }
+  .meta td:first-child { width: 38%; font-weight: bold; background: #f4f7fb; }
+</style>
+</head>
+<body>
+
+<div class="sampul">
+  <div class="judul">ADIL</div>
+  <div class="anak">THE AI TRIAL</div>
+  <p class="kecil" style="margin-top:4mm">Gim Edukasi Etika Kecerdasan Artifisial untuk Jenjang SMP</p>
+  <div class="jenis">
+    <strong>PANDUAN PENGGUNAAN</strong><br>
+    <span class="kecil">Festival Biru Putih 2026 · Kategori: Gim Edukasi</span>
+  </div>
+</div>
+
+<h2 style="margin-top:14mm">A. Identitas Karya</h2>
+<table class="meta">
+  <tr><td>Judul Karya</td><td>ADIL — The AI Trial</td></tr>
+  <tr><td>Kategori</td><td>Gim Edukasi</td></tr>
+  <tr><td>Mata Pelajaran</td><td>Informatika — Dampak Sosial Informatika &amp; Berpikir Komputasional</td></tr>
+  <tr><td>Fase / Kelas</td><td>Fase D — Kelas VII sampai IX</td></tr>
+  <tr><td>Alokasi Waktu</td><td>4 × 40 menit (satu sidang per pertemuan) atau 2 × 80 menit</td></tr>
+  <tr><td>Tujuan Pembelajaran</td><td>Peserta didik mampu mengevaluasi keputusan sistem AI secara kritis, mengenali bias data dan algoritma, serta menjelaskan mengapa tanggung jawab akhir tetap berada pada manusia.</td></tr>
+</table>
+
+<h2>B. Cara Menjalankan</h2>
+<p>ADIL adalah aplikasi web satu halaman (<em>Single Page Application</em>) berbasis HTML5. Tidak memerlukan pemasangan, akun, koneksi internet, maupun plugin pihak ketiga.</p>
+<ol>
+  <li>Ekstrak berkas <strong>ADIL.zip</strong> ke sebuah folder.</li>
+  <li>Buka berkas <strong>index.html</strong> pada peramban modern (Chrome, Firefox, Edge, atau Safari versi terbaru).</li>
+  <li>Gim langsung berjalan. Seluruh gambar, suara, dan huruf sudah berada di dalam folder yang sama.</li>
+</ol>
+<div class="kotak">
+  <strong>Catatan.</strong> Seluruh aset bersifat lokal — tidak ada satu pun rujukan ke alamat internet. Progres
+  pemain disimpan di peramban perangkat yang bersangkutan, sehingga gim tetap berjalan penuh tanpa jaringan.
+</div>
+
+<h2>C. Struktur Gim</h2>
+<table>
+  <tr><th style="width:26%">Bagian</th><th>Isi</th></tr>
+  <tr><td>Laman Muka</td><td>Judul gim, tujuan pembelajaran, ringkasan peran pemain, dan tombol mulai.</td></tr>
+  <tr><td>Cara Bermain</td><td>Tutorial mekanik permainan: lima tahap sidang, cara skor dihitung, dan kontrol. Dapat dibuka sebelum bermain.</td></tr>
+  <tr><td>Arsip Kasus</td><td>Daftar empat sidang. Sidang berikutnya terbuka setelah sidang sebelumnya diputus.</td></tr>
+  <tr><td>Ruang Investigasi</td><td>Arena utama permainan, terdiri atas lima tahap berurutan.</td></tr>
+  <tr><td>Ruang Putusan</td><td>Pemain menjatuhkan putusan etis atas kasus yang diperiksa.</td></tr>
+  <tr><td>Hasil</td><td>Skor terperinci, lencana yang terbuka, evaluasi putusan, dan pelajaran kasus.</td></tr>
+  <tr><td>Profil Analis</td><td>Rekapitulasi seluruh sidang, pangkat, lencana, dan profil cara berpikir pemain.</td></tr>
+  <tr><td>Panduan Guru</td><td>Tujuan pembelajaran, pertanyaan refleksi, aktivitas diskusi, dan miskonsepsi yang umum muncul.</td></tr>
+</table>
+
+<h2>D. Lima Tahap dalam Satu Sidang</h2>
+<table>
+  <tr><th style="width:8%">No</th><th style="width:24%">Tahap</th><th>Kegiatan Peserta Didik</th></tr>
+  <tr><td>01</td><td>Briefing</td><td>Membaca duduk perkara: keputusan yang diambil AI, dasar keputusannya, tingkat keyakinan sistem, serta manfaat sistem tersebut.</td></tr>
+  <tr><td>02</td><td>Papan Bukti</td><td>Memindai enam berkas bukti. Tiap pindaian membuka temuan beserta konsep keilmuan di baliknya. Tidak seluruh berkas relevan.</td></tr>
+  <tr><td>03</td><td>Interogasi AI</td><td>Mengajukan pertanyaan kepada LUMA, sistem AI yang sedang diperiksa. Sebagian jawaban membuka wawasan kunci.</td></tr>
+  <tr><td>04</td><td>Analisis</td><td>Memilih tiga bukti kunci yang membentuk satu rantai sebab-akibat, lalu menguncinya.</td></tr>
+  <tr><td>05</td><td>Putusan</td><td>Memilih satu dari empat putusan etis. Putusan tidak dapat dibatalkan.</td></tr>
+</table>
+<p class="kecil">Tahap Analisis terkunci sampai sekurang-kurangnya tiga berkas dipindai, dan tahap Putusan terkunci
+sampai analisis dikunci. Urutan ini memastikan peserta didik memutus setelah memeriksa, bukan sebaliknya.</p>
+
+<h2 class="pb">E. Empat Sidang</h2>
+<table>
+  <tr><th style="width:8%">Kode</th><th style="width:28%">Judul</th><th style="width:26%">Konsep</th><th>Tujuan Pembelajaran</th></tr>
+  <tr><td>ADIL-001</td><td>Beasiswa yang Berat Sebelah</td><td>Bias data &amp; transparansi</td>
+      <td>Menjelaskan bahwa AI hanya menilai informasi yang ada dalam datanya; mengidentifikasi variabel yang hilang; menghubungkan tujuan kebijakan dengan metrik sistem.</td></tr>
+  <tr><td>ADIL-002</td><td>Siswa yang Tak Terlihat</td><td>Bias algoritmik &amp; akuntabilitas</td>
+      <td>Membedakan akurasi rata-rata dengan akurasi per kelompok; menjelaskan hubungan keragaman data latih dengan keadilan model; menilai perlunya ambang keyakinan dan verifikasi manusia.</td></tr>
+  <tr><td>ADIL-003</td><td>Masa Depan yang Ditentukan AI</td><td>Otonomi manusia &amp; privasi</td>
+      <td>Membedakan rekomendasi dengan keputusan mengikat; mengenali <em>automation bias</em>; menjelaskan mengapa data historis dapat membatasi pilihan masa depan.</td></tr>
+  <tr><td>ADIL-004</td><td>Hakim Algoritma</td><td>Pengawasan manusia &amp; tanggung jawab</td>
+      <td>Menjelaskan arti pengawasan manusia yang bermakna; mengidentifikasi konteks manusia yang hilang di balik angka; merumuskan syarat sistem otomatis yang menyangkut hak siswa.</td></tr>
+</table>
+
+<h2>F. Penilaian dalam Gim</h2>
+<p>Setiap sidang bernilai maksimal 100 poin, tersusun atas tiga komponen. Mengulang sidang tidak menurunkan skor terbaik yang telah tersimpan.</p>
+<table>
+  <tr><th style="width:26%">Komponen</th><th style="width:12%">Bobot</th><th>Yang Diukur</th></tr>
+  <tr><td>Evidence Score</td><td>35</td><td>Ketelitian menemukan bukti yang relevan di antara berkas yang tersedia.</td></tr>
+  <tr><td>Reasoning Score</td><td>25</td><td>Keberanian mengajukan pertanyaan dan ketepatan memilih bukti kunci.</td></tr>
+  <tr><td>Ethics Score</td><td>40</td><td>Kualitas putusan: menunjuk penyebab, dampak, dan perbaikan sistem, bukan sekadar menyalahkan AI.</td></tr>
+</table>
+<p>Selain skor, tersedia delapan lencana yang diberikan atas <em>cara bermain</em>, bukan semata jawaban benar —
+misalnya memindai seluruh berkas termasuk yang tidak relevan, atau mengajukan seluruh pertanyaan interogasi.
+Setelah keempat sidang selesai, pemain menerima profil analis dan predikat akhir.</p>
+
+<h2>G. Menyiapkan Pembelajaran di Kelas</h2>
+<h3>Perangkat dengan koneksi terbatas</h3>
+<p>ADIL dapat dipasang sebagai aplikasi (PWA) bila diakses melalui peramban dari alamat web. Buka satu kali
+selagi ada internet, lalu pilih <em>Install</em>. Setelah itu satu sidang penuh dapat dimainkan tanpa koneksi.
+Bila dijalankan langsung dari hasil ekstrak ZIP, gim memang sudah sepenuhnya luring sejak awal.</p>
+<h3>Satu perangkat dipakai bergantian</h3>
+<p>Progres tersimpan per perangkat, bukan per peserta didik. Sebelum kelompok berikutnya mulai, buka
+<strong>⚙ Pengaturan → Reset seluruh progres</strong>. Tindakan ini meminta konfirmasi terlebih dahulu.</p>
+<h3>Kelas tanpa pengeras suara pribadi</h3>
+<p>Pada ⚙ Pengaturan, <em>Narasi suara</em> dapat dimatikan terpisah dari efek suara. Seluruh dialog selalu
+bersubtitle, sehingga tidak ada materi yang hilang ketika suara dimatikan.</p>
+<h3>Aksesibilitas</h3>
+<p>Seluruh permainan dapat dijalankan dengan papan ketik: <strong>Tab</strong> berpindah antarelemen,
+<strong>Enter</strong> memilih, <strong>Esc</strong> menutup Pengaturan. Tersedia pula mode
+<em>Kurangi animasi</em> bagi peserta didik yang tidak nyaman dengan efek gerak. Ukuran teks sekurang-kurangnya
+12 piksel dan setiap elemen sentuh berukuran sekurang-kurangnya 44 × 44 piksel.</p>
+
+<h2>H. Spesifikasi Teknis</h2>
+<table>
+  <tr><td style="width:38%;font-weight:bold;background:#f4f7fb">Teknologi</td><td>HTML5, CSS, JavaScript (React). Tanpa plugin pihak ketiga.</td></tr>
+  <tr><td style="font-weight:bold;background:#f4f7fb">Bentuk aplikasi</td><td><em>Single Page Application</em>; tidak ada pengalihan ke halaman HTML lain.</td></tr>
+  <tr><td style="font-weight:bold;background:#f4f7fb">Berkas utama</td><td><code>index.html</code> pada direktori akar hasil ekstrak.</td></tr>
+  <tr><td style="font-weight:bold;background:#f4f7fb">Aset eksternal</td><td>Tidak ada. Seluruh gambar, audio, dan huruf tersimpan lokal.</td></tr>
+  <tr><td style="font-weight:bold;background:#f4f7fb">Peramban</td><td>Chrome, Firefox, Safari, Edge versi terbaru.</td></tr>
+  <tr><td style="font-weight:bold;background:#f4f7fb">Perangkat</td><td>Laptop, tablet, dan telepon pintar. Tata letak menyesuaikan lebar layar.</td></tr>
+  <tr><td style="font-weight:bold;background:#f4f7fb">Penyimpanan progres</td><td><em>localStorage</em> peramban, pada perangkat masing-masing.</td></tr>
+</table>
+
+<h2>I. Pemecahan Masalah</h2>
+<table>
+  <tr><th style="width:34%">Gejala</th><th>Penyebab dan Solusi</th></tr>
+  <tr><td>Halaman tampak kosong</td><td>Pastikan seluruh isi ZIP diekstrak, bukan hanya <code>index.html</code>. Folder <code>assets</code> harus berada di samping berkas tersebut.</td></tr>
+  <tr><td>Tidak ada suara</td><td>Periksa ⚙ Pengaturan: <em>Efek suara</em> dan <em>Narasi suara</em> diatur terpisah. Sebagian peramban juga baru mengizinkan suara setelah interaksi pertama pengguna.</td></tr>
+  <tr><td>Tombol tahap terkunci</td><td>Pindai sekurang-kurangnya tiga berkas untuk membuka tahap Analisis; kunci analisis untuk membuka tahap Putusan.</td></tr>
+  <tr><td>Progres hilang</td><td>Peramban berbeda, mode penyamaran, atau data situs telah dibersihkan. Perlu diketahui pula bahwa progres di tengah sidang tidak disimpan — memuat ulang halaman akan memulai sidang itu dari awal, sedangkan skor sidang yang telah selesai tetap aman.</td></tr>
+</table>
+
+<h2>J. Pernyataan Aset</h2>
+<p>Seluruh ilustrasi tokoh, latar, lencana, dan ikon dibuat sendiri sebagai gambar vektor datar. Huruf yang
+digunakan (Orbitron, Inter, JetBrains Mono) berlisensi SIL Open Font License 1.1 dan disertakan di dalam paket.
+Musik latar bersumber dari Pixabay dengan Pixabay Content License, sedangkan efek suara dihasilkan melalui
+ElevenLabs. Lambang Kementerian Pendidikan Dasar dan Menengah beserta lambang program digunakan sesuai
+ketentuan penggunaan lambang resmi. Rincian lengkap tercantum pada berkas <code>docs/asset-attribution.md</code>
+di dalam paket karya.</p>
+
+</body>
+</html>
