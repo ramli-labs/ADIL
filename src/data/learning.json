@@ -47,7 +47,7 @@
       "duration": "40 menit",
       "takeaway": "Model hanya seadil data latihnya. Akurasi wajib diukur per kelompok, bukan hanya rata-rata.",
       "reflection_questions": [
-        "Mengapa angka 96% bisa menyesatkan bagi 11 siswa yang selalu gagal dikenali?",
+        "Mengapa akurasi 96% bisa menyesatkan bagi siswa yang berada di kelompok dengan akurasi 79,4%?",
         "Siapa yang bertanggung jawab ketika sistem salah: pembuat, sekolah, atau guru yang memakainya?",
         "Apa yang seharusnya dilakukan sistem ketika keyakinannya hanya 0,52?"
       ],

@@ -1,0 +1,100 @@
+# ADIL — PEMETAAN CAPAIAN PEMBELAJARAN & TUJUAN PEMBELAJARAN
+
+Dokumen ini memetakan setiap bagian gim ADIL ke Capaian Pembelajaran (CP) dan Tujuan
+Pembelajaran (TP) mata pelajaran **Informatika Fase D (Kelas VII–IX)**.
+
+> **PERLU DILENGKAPI SEBELUM DIKIRIM.** Kolom *Rumusan CP* sengaja dikosongkan.
+> Rumusan CP adalah kutipan resmi dari keputusan kepala BSKAP yang berlaku, dan harus disalin
+> persis dari dokumen aslinya — bukan diparafrasekan. Salin rumusan untuk elemen yang tertera,
+> lalu hapus catatan ini.
+
+## A. Identitas
+
+| | |
+|---|---|
+| Mata pelajaran | Informatika |
+| Fase / Kelas | Fase D — Kelas VII sampai IX |
+| Elemen yang disasar | Dampak Sosial Informatika (DSI); Berpikir Komputasional (BK) |
+| Alokasi waktu | 4 × 40 menit (satu sidang per pertemuan) atau 2 × 80 menit |
+| Kompetensi utama | Peserta didik mampu mengevaluasi keputusan sistem AI secara kritis, mengenali bias data dan algoritma, serta menjelaskan mengapa tanggung jawab akhir tetap berada pada manusia. |
+
+## B. Rumusan CP yang dirujuk
+
+| Kode | Elemen | Rumusan CP (salin dari dokumen resmi) |
+|---|---|---|
+| DSI | Dampak Sosial Informatika | _(isi)_ |
+| BK | Berpikir Komputasional | _(isi)_ |
+
+## C. Pemetaan per Sidang
+
+Setiap sidang memuat tiga TP yang bersumber dari `src/data/learning.json`, sehingga rumusan di
+dokumen ini dan yang tampil di dalam gim tidak dapat berbeda.
+
+### ADIL-001 — Beasiswa yang Berat Sebelah
+**Konsep:** bias data & transparansi · **Elemen:** DSI, BK
+
+| TP | Bukti pencapaian di dalam gim |
+|---|---|
+| Menjelaskan bahwa AI hanya dapat menilai informasi yang tersedia dalam datanya. | Memindai *Laporan Dataset* dan menemukan tidak adanya kolom kondisi ekonomi; menjawab interogasi LUMA tentang dasar penolakan. |
+| Mengidentifikasi variabel yang hilang pada sebuah dataset keputusan. | Memilih *Surat Keterangan Ekonomi* sebagai bukti kunci pada tahap Analisis. |
+| Menghubungkan tujuan kebijakan dengan metrik yang dipakai sistem. | Memilih *Tujuan Program Beasiswa* sebagai bukti kunci; memilih putusan B yang menuntut variabel diperbaiki, bukan sistem dihapus. |
+
+### ADIL-002 — Siswa yang Tak Terlihat
+**Konsep:** bias algoritmik & akuntabilitas · **Elemen:** DSI, BK
+
+| TP | Bukti pencapaian di dalam gim |
+|---|---|
+| Membedakan akurasi rata-rata dengan akurasi per kelompok. | Memindai *Akurasi per Kelompok* (98,1% / 79,4% / 84%) dan menyimpulkan rata-rata 96% menutupi kegagalan subkelompok. |
+| Menjelaskan hubungan keragaman data latih dengan keadilan model. | Memilih *Komposisi Dataset Latih* sebagai bukti kunci. |
+| Menilai perlunya ambang keyakinan dan verifikasi manusia. | Memindai *Laporan Confidence* (0,52) dan *Prosedur Banding*; memilih putusan B yang menuntut pelatihan ulang, ambang keyakinan, dan jalur koreksi. |
+
+### ADIL-003 — Masa Depan yang Ditentukan AI
+**Konsep:** otonomi manusia & privasi · **Elemen:** DSI
+
+| TP | Bukti pencapaian di dalam gim |
+|---|---|
+| Membedakan rekomendasi AI dengan keputusan yang mengikat. | Memindai *Kebijakan Sekolah* dan mengenali perubahan saran menjadi syarat pendaftaran. |
+| Mengenali *automation bias* pada diri sendiri. | Memindai *Survei Siswa* tentang daya tekan psikologis keluaran mesin; menolak putusan A yang menuruti AI karena akurasinya. |
+| Menjelaskan mengapa data historis dapat membatasi pilihan masa depan. | Memindai *Variabel Model* dan menghubungkannya dengan *Wawancara Sinta* pada tahap Analisis. |
+
+### ADIL-004 — Hakim Algoritma
+**Konsep:** pengawasan manusia & tanggung jawab · **Elemen:** DSI, BK
+
+| TP | Bukti pencapaian di dalam gim |
+|---|---|
+| Menjelaskan arti pengawasan manusia yang bermakna (bukan sekadar tanda tangan). | Memindai *Log Persetujuan* (rata-rata 8 detik) dan mengenali *rubber-stamping*. |
+| Mengidentifikasi konteks manusia yang hilang di balik angka. | Memindai *Surat Rumah Sakit* dan menghubungkannya dengan pola keterlambatan pada *Catatan Pelanggaran*. |
+| Merumuskan syarat sistem otomatis yang menyangkut hak siswa. | Memilih putusan B yang membatalkan sanksi sekaligus mewajibkan sistem menyediakan ruang konteks. |
+
+## D. Asesmen Terintegrasi
+
+Penilaian melekat pada permainan; tidak ada kuis terpisah di luar alur.
+
+| Komponen | Bobot | Yang diukur | Kaitan dengan TP |
+|---|---|---|---|
+| Evidence Score | 35 | Ketelitian menemukan bukti relevan di antara enam berkas. | Menunjukkan penguasaan TP pertama tiap sidang — mengenali informasi apa yang ada dan apa yang hilang. |
+| Reasoning Score | 25 | Keberanian bertanya dan ketepatan memilih tiga bukti kunci. | Menunjukkan kemampuan merangkai sebab-akibat, inti Berpikir Komputasional. |
+| Ethics Score | 40 | Kualitas putusan: menunjuk penyebab, dampak, dan perbaikan. | Menunjukkan penguasaan TP ketiga tiap sidang — merumuskan perbaikan sistem, bukan menyalahkan alat. |
+
+Setiap pilihan putusan memberi umpan balik berbeda yang menjelaskan **mengapa** suatu jawaban lemah,
+sehingga kesalahan tetap menjadi peristiwa belajar. Delapan lencana diberikan atas *cara bermain*
+— misalnya memindai seluruh berkas termasuk yang tidak relevan — bukan semata atas jawaban benar.
+
+## E. Tingkat Kognitif
+
+Tantangan disusun menaik menurut taksonomi Bloom, sejalan dengan tingkat kesulitan sidang.
+
+| Tahap dalam gim | Tingkat | Alasan |
+|---|---|---|
+| Briefing | C2 — memahami | Membaca duduk perkara dan dasar keputusan sistem. |
+| Papan Bukti | C3 — menerapkan | Memilah berkas relevan dari yang tidak relevan. |
+| Interogasi AI | C4 — menganalisis | Menggali informasi yang tidak tampak pada berkas. |
+| Analisis | C4–C5 — menganalisis & mengevaluasi | Merangkai tiga bukti menjadi satu rantai sebab-akibat. |
+| Putusan | C5–C6 — mengevaluasi & mencipta | Menilai keputusan sistem dan merumuskan perbaikannya. |
+
+## F. Sumber Rumusan
+
+Seluruh tujuan pembelajaran pada dokumen ini bersumber dari `src/data/learning.json`
+(`meta.competency` dan `cases[*].objectives`). Berkas itu pula yang dibaca Laman Muka dan halaman
+Cara Bermain di dalam gim, sehingga menyunting rumusan di satu tempat akan memperbaruinya di
+seluruh tampilan sekaligus.

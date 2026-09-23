@@ -81,7 +81,7 @@
         "text": "Akurasi 96% sudah cukup baik, lanjutkan saja.",
         "score": 5,
         "tier": "weak",
-        "feedback": "Rata-rata tinggi tidak berarti adil. Bagi 11 siswa itu, sistem salah 100% dari waktu ke waktu.",
+        "feedback": "Rata-rata tinggi tidak berarti adil. Angka 96% itu menutupi 79,4% pada satu kelompok — sekitar satu dari lima pemindaian gagal, dan kegagalan itu menimpa siswa yang sama berulang kali.",
         "traits": [
           "surface"
         ]
