@@ -29,11 +29,6 @@ export default function Character({
           onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = "hidden"; }} />
         <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(115deg,rgba(255,255,255,.07)_0_2px,transparent_2px_10px)]" />
         <div className="pointer-events-none absolute inset-x-0 top-0 h-16 animate-scanline bg-gradient-to-b from-transparent via-cyan/15 to-transparent" />
-        {!compact && (
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 p-2 text-center font-mono text-[9px] text-haze/70">
-            assets/characters/{slug}/{state}.png
-          </div>
-        )}
       </div>
       <div className="mt-2.5 flex items-center justify-between gap-2">
         <span className="font-display text-[14px] font-bold tracking-[.1em]" style={{ color: info?.accent }}>{name}</span>
