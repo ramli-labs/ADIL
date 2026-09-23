@@ -8,6 +8,29 @@ Ini bukan kuis: siswa harus mencari bukti, menginterogasi sistem, merangkai kesi
 **Pesan inti:** AI dapat membantu manusia, tetapi setiap keputusan AI wajib dievaluasi secara
 bertanggung jawab. AI tidak digambarkan sebagai musuh.
 
+## Menyiapkan kelas
+**Internet tidak stabil?** ADIL bisa dipasang seperti aplikasi dan dimainkan sepenuhnya offline.
+Di tiap perangkat, buka situsnya sekali ketika masih ada internet lalu pilih **Install/Pasang**
+di browser. Setelah itu satu sidang penuh bisa diselesaikan tanpa koneksi. Agar musik dan suara
+tokoh ikut tersimpan, mainkan sekali dulu selagi online — tanpa itu pun permainan tetap jalan
+karena seluruh dialog selalu bersubtitle.
+
+**Satu laptop dipakai bergantian.** Progres tersimpan per perangkat, bukan per siswa. Sebelum
+kelompok berikutnya mulai, buka **⚙ Pengaturan → Reset seluruh progres** (perlu konfirmasi,
+jadi tidak akan terhapus karena salah pencet). Tanpa direset, kelompok berikutnya akan melanjutkan
+skor kelompok sebelumnya.
+
+**Kelas tanpa headphone.** Di ⚙ Pengaturan, *Narasi suara* bisa dimatikan terpisah dari efek
+suara. Subtitle tetap tampil penuh, jadi tidak ada materi yang hilang.
+
+**Siswa yang terganggu oleh gerakan.** Nyalakan *Kurangi animasi* di ⚙ Pengaturan untuk
+mematikan seluruh efek gerak. Permainan bisa pula dijalankan sepenuhnya dengan keyboard
+(`Tab` berpindah, `Enter` memilih, `Esc` menutup).
+
+**Bila tampilan tampak berbeda dari yang Bapak/Ibu siapkan,** muat ulang halaman sekali —
+versi baru sengaja menunggu sampai pengguna menekan tombol MUAT ULANG agar tidak berganti
+di tengah sidang.
+
 ## Sasaran & durasi
 - Jenjang: SMP kelas VII–IX
 - Mapel: Informatika — Dampak Sosial Informatika & Berpikir Komputasional
@@ -58,3 +81,8 @@ tekankan bahwa tugas siswa adalah menilai, bukan menolak teknologi.
 
 Seluruh isi panduan ini bersumber dari `src/data/learning.json` dan dapat disunting
 tanpa menyentuh kode program.
+
+## Catatan teknis singkat
+Progres di **tengah** sidang tidak tersimpan: bila halaman dimuat ulang saat siswa sedang
+memindai bukti, sidang itu mulai dari awal. Skor sidang yang sudah selesai tidak terpengaruh.
+Ingatkan siswa untuk tidak menutup tab sebelum putusan dijatuhkan.

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AnalystProfileCard from "../components/ui/AnalystProfileCard";
 import Badge from "../components/ui/Badge";
@@ -9,6 +10,7 @@ import { useGame } from "../engine/gameState";
 export default function Profile() {
   const navigate = useNavigate();
   const g = useGame();
+  const [konfirmasiReset, setKonfirmasiReset] = useState(false);
   const playerName = (g.save.playerName ?? "ANALIS NUSANTARA").toUpperCase();
 
   return (
@@ -60,7 +62,18 @@ export default function Profile() {
       <div className="flex flex-wrap items-center gap-3">
         <Button variant="cyan" onClick={() => navigate("/cases")}>LANJUT KE ARSIP KASUS</Button>
         <Button variant="ghost" onClick={() => navigate("/teacher")}>PANDUAN GURU</Button>
-        <Button variant="ghost" onClick={g.resetSave}>RESET DOSIR</Button>
+        {/* Menghapus progres tidak boleh terjadi dalam satu klik — sama seperti di Pengaturan. */}
+        {konfirmasiReset ? (
+          <div className="flex flex-wrap items-center gap-2.5 border border-[#e07a7a]/40 bg-[#e07a7a]/[.06] px-4 py-3">
+            <span className="font-mono text-[12px] leading-relaxed text-white">
+              Hapus seluruh skor, lencana, dan riwayat sidang? Tidak bisa dibatalkan.
+            </span>
+            <Button variant="ghost" onClick={() => setKonfirmasiReset(false)}>BATAL</Button>
+            <Button variant="ghost" onClick={() => { g.resetSave(); setKonfirmasiReset(false); }}>YA, HAPUS SEMUA</Button>
+          </div>
+        ) : (
+          <Button variant="ghost" onClick={() => setKonfirmasiReset(true)}>RESET DOSIR</Button>
+        )}
       </div>
     </motion.section>
   );
