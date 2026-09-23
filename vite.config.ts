@@ -6,7 +6,10 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: "autoUpdate",
+      // "prompt", bukan "autoUpdate": versi baru tidak boleh menyelinap masuk di tengah
+      // sidang yang sedang berjalan. Pemain diberi tahu dan memilih kapan memuat ulang.
+      registerType: "prompt",
+      injectRegister: null, // registrasi dilakukan dari UpdateNotice.tsx
       includeAssets: ["favicon.svg", "icon-192.png", "icon-512.png", "icon-maskable-512.png"],
       manifest: {
         name: "ADIL — The AI Trial",
@@ -32,6 +35,11 @@ export default defineConfig({
         globPatterns: ["**/*.{js,css,html,woff2,png,svg}", "assets/audio/effects/*.mp3"],
         navigateFallback: "/index.html",
         cleanupOutdatedCaches: true,
+        // Wajib bersama registerType "prompt": tanpa ini SW baru aktif tapi tidak pernah
+        // mengambil alih tab yang sudah terbuka, jadi "controllerchange" tak menyala dan
+        // tombol MUAT ULANG tidak menghasilkan apa-apa. skipWaiting tetap mati —
+        // pergantian versi hanya boleh terjadi setelah pemain menekan tombol.
+        clientsClaim: true,
         runtimeCaching: [
           {
             urlPattern: /\/assets\/audio\/.*\.mp3$/,
