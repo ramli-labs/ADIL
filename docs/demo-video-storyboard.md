@@ -3,6 +3,23 @@
 Ketentuan Festival Biru Putih: **MP4, maksimal 3 menit**. Storyboard ini dirancang **2 menit 20 detik**,
 menyisakan ruang bila ada bagian yang perlu diperlambat.
 
+## Membuat ulang video secara otomatis
+
+`video-demonstrasi.mp4` di dalam paket dibuat oleh `tools/rekam-demo.cjs`, yang memainkan adegan 1–12
+di peramban lalu menempelkan audio asli gim (musik, efek suara, dan dubbing tokoh) pada detik yang sama
+dengan saat gim memutarnya. Hasilnya berdurasi sekitar 2 menit, tanpa narator.
+
+```bash
+npm run dev -- --port 5174 --host 127.0.0.1   # terminal pertama
+node tools/rekam-demo.cjs                       # terminal kedua → video-demonstrasi.mp4
+./tools/buat-paket-lomba.sh                     # memasukkannya ke ZIP
+```
+
+Jalankan ulang setiap kali tampilan gim berubah, agar video tidak memperlihatkan versi lama.
+Bila ingin menambahkan narasi suara sendiri, rekam secara manual mengikuti panduan di bawah.
+
+## Merekam manual
+
 **Rekam pada 1920×1080, 30 fps.** Rasio 16:9. Sebelum merekam: sembunyikan bilah markah, tutup tab lain,
 jalankan peramban dalam mode layar penuh, dan siapkan progres bersih (⚙ Pengaturan → Reset seluruh progres).
 
