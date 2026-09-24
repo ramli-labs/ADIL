@@ -9,7 +9,7 @@ Pembelajaran (TP) mata pelajaran **Informatika Fase D (Kelas VII–IX)**.
 
 ## A. Identitas
 
-| | |
+| Aspek | Keterangan |
 |---|---|
 | Mata pelajaran | Informatika |
 | Fase / Kelas | Fase D — Kelas VII sampai IX |

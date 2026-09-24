@@ -20,13 +20,11 @@ cp -r dist/. "$KELUARAN/$NAMA/"
 echo "▸ Menyertakan PDF panduan penggunaan…"
 cp docs/panduan-penggunaan/ADIL-Panduan-Penggunaan.pdf "$KELUARAN/$NAMA/"
 
-echo "▸ Menyertakan pencatatan lisensi aset…"
-cp docs/asset-attribution.md "$KELUARAN/$NAMA/lisensi-aset.md"
+# PDF, bukan Markdown: di laptop juri .md terbuka sebagai teks mentah penuh simbol.
+echo "▸ Menyertakan pemetaan CP/TP dan atribusi aset…"
+cp docs/ADIL-Pemetaan-CP-TP.pdf docs/ADIL-Atribusi-Aset.pdf "$KELUARAN/$NAMA/"
 
-echo "▸ Menyertakan pemetaan CP/TP…"
-cp docs/pemetaan-cp-tp.md "$KELUARAN/$NAMA/pemetaan-cp-tp.md"
-
-# Video demonstrasi wajib, tetapi harus direkam sendiri oleh peserta.
+# Video demonstrasi wajib; dibuat dengan tools/rekam-demo.cjs.
 if [ -f "$AKAR/video-demonstrasi.mp4" ]; then
   echo "▸ Menyertakan video demonstrasi…"
   cp "$AKAR/video-demonstrasi.mp4" "$KELUARAN/$NAMA/"
