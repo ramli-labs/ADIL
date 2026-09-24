@@ -17,6 +17,9 @@ mkdir -p "$KELUARAN/$NAMA"
 echo "▸ Menyalin gim (index.html di akar)…"
 cp -r dist/. "$KELUARAN/$NAMA/"
 
+echo "▸ Menyertakan BACA-SAYA.txt (tautan versi daring)…"
+cp docs/BACA-SAYA.txt "$KELUARAN/$NAMA/"
+
 echo "▸ Menyertakan PDF panduan penggunaan…"
 cp docs/panduan-penggunaan/ADIL-Panduan-Penggunaan.pdf "$KELUARAN/$NAMA/"
 

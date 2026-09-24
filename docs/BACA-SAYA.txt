@@ -1,0 +1,24 @@
+ADIL — THE AI TRIAL
+Gim Edukasi Etika Kecerdasan Artifisial · Informatika Fase D (Kelas VII–IX)
+Festival Biru Putih 2026 · Kategori: Gim Edukasi
+
+========================================================================
+COBA LANGSUNG (DARING, TANPA MENGUNDUH)
+  https://adil-gules.vercel.app
+  Dapat dibuka di laptop, tablet, maupun ponsel.
+========================================================================
+
+MENJALANKAN DARI BERKAS INI (LURING)
+  1. Ekstrak seluruh isi ZIP ke satu folder.
+  2. Buka index.html di peramban (Chrome, Firefox, Edge, atau Safari).
+  3. Gim langsung berjalan tanpa internet.
+
+ISI PAKET
+  index.html                    Gim (berkas utama)
+  assets/                       Gambar, suara, dan huruf yang dipakai gim
+  video-demonstrasi.mp4         Video demonstrasi (2 menit 1 detik)
+  ADIL-Panduan-Penggunaan.pdf   Panduan penggunaan
+  ADIL-Pemetaan-CP-TP.pdf       Pemetaan Capaian & Tujuan Pembelajaran
+  ADIL-Atribusi-Aset.pdf        Sumber dan lisensi seluruh aset
+
+Pembuat: Ramli Jainal Muttaqin, S.Pd. — SMP Labschool Jakarta
